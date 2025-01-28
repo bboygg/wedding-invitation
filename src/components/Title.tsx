@@ -63,7 +63,7 @@ export default function Title({ data }: TitleProps) {
         <source src="./assets/BackgroundVideo.mp4" type="video/mp4" />
       </VideoBackground>
       <TitleWrapper>
-        <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
+        <WeddingInvitation>YOU ARE INVITED🥰</WeddingInvitation>
         <GroomBride>
           {data?.groom?.name} &#38; {data?.bride?.name}
         </GroomBride>
