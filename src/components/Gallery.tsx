@@ -18,8 +18,8 @@ const Title = styled("p", {
 
 const images = [
   {
-    original: "./assets/Gallery_Photo_1.png",
-    thumbnail: "./assets/Gallery_Photo_1.png",
+    original: "./assets/photo-1.jpeg",
+    thumbnail: "./assets/photo-1.jpeg",
   },
   {
     original: "./assets/Gallery_Photo_2.png",
