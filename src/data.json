@@ -1,7 +1,7 @@
 {
-  "date": "2025.06.28 Sat 3PM",
+  "date": "Saturday June 28th, 2025 - 3 PM",
   "location": "TOV HESED, 서울특별시 강남구 도산대로38길 32 (논현동)",
-  "gretting": "THANK YOU \nFOR COMING",
+  "greeting": "THANK YOU \nFOR COMING",
   "groom": {
     "name": "Sungjo Go",
     "account_number": "신한은행 ***-***-******",
@@ -17,8 +17,8 @@
     }
   },
   "bride": {
-    "name": "Long Vorleak Hok",
-    "account_number": "신한은행 ***-***-******",
+    "name": "Long-Vorleak Hok",
+    "account_number": "신한은행 110-***-******",
     "parents": {
       "mother": {
         "name": "○○○",

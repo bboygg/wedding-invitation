@@ -24,7 +24,7 @@ const TitleWrapper = styled("div", {
 });
 
 const VideoBackground = styled("video", {
-  backgroundColor: "#aeb8b3 !important",
+  backgroundColor: "#aeb8b !important",
   opacity: 0.9,
   objectFit: "cover",
   objectPosition: "center center",
@@ -60,10 +60,10 @@ export default function Title({ data }: TitleProps) {
   return (
     <Layout>
       <VideoBackground autoPlay loop muted playsInline={true}>
-        <source src="./assets/BackgroundVideo.mp4" type="video/mp4" />
+        <source src="./assets/backgroundsparkle.mp4" type="video/mp4" />
       </VideoBackground>
       <TitleWrapper>
-        <WeddingInvitation>YOU ARE INVITED🥰</WeddingInvitation>
+        <WeddingInvitation>YOU ARE INVITED TO OUR WEDDING 🥰</WeddingInvitation>
         <GroomBride>
           {data?.groom?.name} &#38; {data?.bride?.name}
         </GroomBride>

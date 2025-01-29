@@ -7,7 +7,7 @@ import JsonData from "@/data.json";
 import Script from "next/script";
 
 const Title = dynamic(() => import("@/components/Title"), { ssr: false });
-const Gretting = dynamic(() => import("@/components/Gretting"), { ssr: false });
+const Greeting = dynamic(() => import("@/components/Greeting"), { ssr: false });
 const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
 const Location = dynamic(() => import("@/components/Location"), { ssr: false });
 const CongratulatoryMoney = dynamic(
@@ -44,13 +44,13 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content="website" />
-        <meta content="Welcome to Sunjog❤Vorleak Wedding " name="Title" />
+        <meta content="Welcome to the wedding of Sungjo ❤ Vorleak Wedding " name="Title" />
         <meta
           content="2025.06.28 Sat 3PM"
           name="Description"
         />
-        <meta content="2025.06.28 Sat 3PM" name="Keyword" />
-        <meta property="og:title" content="Welcome to Sunjo❤Vorleak Wedding" />
+        <meta content="2025.06.28 Sat 3 PM" name="Keyword" />
+        <meta property="og:title" content="Sungjo ❤ Vorleak Wedding" />
         <meta
           property="og:description"
           content="2025.06.28 Sat 3PM"
@@ -60,17 +60,17 @@ export default function Home() {
           content="https://kyuhyuk.kr/wedding-invitation"
         />
         <meta name="theme-color" content="#BCAAA4" />
-        <title>Welcome to Sunjo❤Vorleak Wedding</title>
+        <title>Sungjo ❤ Vorleak Wedding</title>
       </Head>
       <main className={`${notoSansKR.className}`}>
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
         <Title data={JsonData} />
-        <Gretting data={JsonData} />
+        <Greeting data={JsonData} />
         <Gallery />
         <Location />
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
-        <Footer>Copyright © 2025 Sungjo&Vorleak</Footer>
+        <Footer>Copyright © 2025 Sungjo & Vorleak</Footer>
       </main>
     </>
   );
