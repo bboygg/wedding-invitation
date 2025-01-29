@@ -64,8 +64,8 @@ export default function CongratulatoryMoney({
         <Title>축하의 마음을 전하세요 - Congratulations</Title>
       </Divider>
       <Content>축하의 마음을 담아 축의금을 전달해 보세요.
-        Please send a gift to express your congratulations.
-      </Content>
+      You can express your congratulations by sending a celebratory gift. 🎉💌
+</Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
         <CheckCircleTwoTone
           style={{ fontSize: 64, marginBottom: 16 }}
