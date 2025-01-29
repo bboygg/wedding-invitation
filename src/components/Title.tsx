@@ -16,7 +16,7 @@ const TitleWrapper = styled("div", {
   left: "50%",
   transform: "translate(-50%, -50%)",
   textAlign: "center",
-  textShadow: "-1px 0 #9e9e9e, 0 1px #9e9e9e, 1px 0 #9e9e9e, 0 -1px #9e9e9e",
+  // textShadow: "-1px 0 #9e9e9e, 0 1px #9e9e9e, 1px 0 #9e9e9e, 0 -1px #9e9e9e",
   animation: "fadein 3s",
   "-moz-animation": "fadein 3s" /* Firefox */,
   "-webkit-animation": "fadein 3s" /* Safari and Chrome */,
@@ -34,21 +34,23 @@ const VideoBackground = styled("video", {
 });
 
 const WeddingInvitation = styled("p", {
-  fontSize: "1.5vh",
-  opacity: 0.45,
-  marginBottom: 16,
+  fontSize: "2vh",
+  fontWeight: "bold",
+  backgroundColor: "rgba(255, 165, 0, 0.6)", // Text background color
+  padding: "8px 16px", // Adds space inside the box
+  borderRadius: "8px", // Rounded corners
+  display: "inline-block", // Ensures background wraps around the text
+  color: "white", // Ensure text is readable
 });
 
 const GroomBride = styled("p", {
-  fontSize: "3.5vh",
-  fontWeight: "bold",
-  opacity: 0.9,
-  marginBottom: 16,
+  fontSize: "4vh",
+  textTransform: "uppercase",
+  marginBottom: 8,
 });
 
 const Schedule = styled("p", {
   fontSize: "2vh",
-  opacity: 0.65,
   marginBottom: 24,
 });
 
@@ -60,10 +62,12 @@ export default function Title({ data }: TitleProps) {
   return (
     <Layout>
       <VideoBackground autoPlay loop muted playsInline={true}>
-        <source src="./assets/backgroundsparkle.mp4" type="video/mp4" />
+        <source src="./assets/Breaking.mp4" type="video/mp4" />
       </VideoBackground>
-      <TitleWrapper>
-        <WeddingInvitation>YOU ARE INVITED TO OUR WEDDING 🥰</WeddingInvitation>
+      <TitleWrapper style={{ color: "white" }}>
+        <WeddingInvitation>
+        YOU ARE INVITED TO OUR WEDDING 🥰
+        </WeddingInvitation>
         <GroomBride>
           {data?.groom?.name} &#38; {data?.bride?.name}
         </GroomBride>
