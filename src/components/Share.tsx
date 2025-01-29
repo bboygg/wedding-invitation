@@ -103,7 +103,7 @@ export default function Share({ data }: ShareProps) {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>청첩장 공유하기</Title>
+        <Title>청첩장 공유하기 - Share Wedding Invitation</Title>
       </Divider>
       <KakaoTalkShareButton
         style={{ margin: 8 }}
@@ -119,9 +119,9 @@ export default function Share({ data }: ShareProps) {
           style={{ margin: 8 }}
           icon={<LinkOutlined />}
           size="large"
-          onClick={() => message.success("청첩장 링크가 복사되었습니다.")}
+          onClick={() => message.success("청첩장 링크가 복사되었습니다. The wedding invitation link has been copied.")}
         >
-          링크로 공유하기
+          링크로 공유하기 / Share Link
         </LinkShareButton>
       </CopyToClipboard>
     </Wrapper>

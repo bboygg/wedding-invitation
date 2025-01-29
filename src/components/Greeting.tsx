@@ -54,7 +54,7 @@ export default function Greeting({ data }: GreetingProps) {
       </Content>
       <GroomBride>
         {data?.groom?.parents?.father?.name} ·{" "}
-        {data?.groom?.parents?.mother?.name}의 막내 {data?.groom?.name}
+        {data?.groom?.parents?.mother?.name}의 차남 고성조 (Sungjo Go)
         <br />
         {data?.bride?.parents?.father?.name} ·{" "}
         {data?.bride?.parents?.mother?.name}의 장녀 {data?.bride?.name}

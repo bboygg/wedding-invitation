@@ -18,28 +18,40 @@ const Title = styled("p", {
 
 const images = [
   {
-    original: "./assets/photo-1.jpeg",
-    thumbnail: "./assets/photo-1.jpeg",
+    original: "./assets/photo-1.jpg",
+    thumbnail: "./assets/photo-1.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_2.png",
-    thumbnail: "./assets/Gallery_Photo_2.png",
+    original: "./assets/photo-2.jpg",
+    thumbnail: "./assets/photo-2.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_3.png",
-    thumbnail: "./assets/Gallery_Photo_3.png",
+    original: "./assets/photo-3.jpg",
+    thumbnail: "./assets/photo-3.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_4.png",
-    thumbnail: "./assets/Gallery_Photo_4.png",
+    original: "./assets/photo-4.jpg",
+    thumbnail: "./assets/photo-4.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_5.png",
-    thumbnail: "./assets/Gallery_Photo_5.png",
+    original: "./assets/photo-5.jpg",
+    thumbnail: "./assets/photo-5.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_6.png",
-    thumbnail: "./assets/Gallery_Photo_6.png",
+    original: "./assets/photo-6.jpg",
+    thumbnail: "./assets/photo-6.jpg",
+  },
+  {
+    original: "./assets/photo-7.jpg",
+    thumbnail: "./assets/photo-7.jpg",
+  },
+  {
+    original: "./assets/photo-8.jpg",
+    thumbnail: "./assets/photo-8.jpg",
+  },
+  {
+    original: "./assets/photo-9.jpg",
+    thumbnail: "./assets/photo-9.jpg",
   },
 ];
 
@@ -47,7 +59,7 @@ export default function Gallery() {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>우리의 아름다운 순간</Title>
+        <Title>우리의 아름다운 순간 - Our Beautiful Moments</Title>
       </Divider>
       <ImageGallery
         showPlayButton={false}

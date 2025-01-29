@@ -50,16 +50,17 @@ export default function Home() {
           name="Description"
         />
         <meta content="2025.06.28 Sat 3 PM" name="Keyword" />
-        <meta property="og:title" content="Sungjo ❤ Vorleak Wedding" />
+        <meta property="og:title" content="Sungjo ❤ Vorleak Wedding Invitation" />
         <meta
           property="og:description"
           content="2025.06.28 Sat 3PM"
         />
         <meta
           property="og:url"
-          content="https://kyuhyuk.kr/wedding-invitation"
+          content=""
         />
         <meta name="theme-color" content="#BCAAA4" />
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='90' font-size='90'%3E💍%3C/text%3E%3C/svg%3E" />
         <title>Sungjo ❤ Vorleak Wedding</title>
       </Head>
       <main className={`${notoSansKR.className}`}>
