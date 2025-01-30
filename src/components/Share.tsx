@@ -71,7 +71,7 @@ export default function Share({ data }: ShareProps) {
         container: "#sendKakao",
         content: {
           title: `${data?.groom?.name}❤${data?.bride?.name} 결혼식에 초대합니다`,
-          description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰",
+          description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요. 🤵👰 Please click the 'Open Wedding Invitation' button below to read it.🤵👰",
           imageUrl: data?.kakaotalk?.share_image,
           link: {
             mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
@@ -112,7 +112,7 @@ export default function Share({ data }: ShareProps) {
         size="large"
         onClick={() => setShareCount(shareCount + 1)}
       >
-        카카오톡으로 공유하기
+        카카오톡으로 공유하기 / Share on KakaoTalk
       </KakaoTalkShareButton>
       <CopyToClipboard text={data?.kakaotalk?.wedding_invitation_url ?? ""}>
         <LinkShareButton

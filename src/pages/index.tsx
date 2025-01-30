@@ -44,7 +44,7 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content="website" />
-        <meta content="Welcome to the wedding of Sungjo ❤ Vorleak Wedding " name="Title" />
+        <meta content="Welcome to the wedding of Sungjo ❤ Vorleak " name="Title" />
         <meta
           content="2025.06.28 Sat 3PM"
           name="Description"
@@ -68,7 +68,7 @@ export default function Home() {
         <Title data={JsonData} />
         <Greeting data={JsonData} />
         <Gallery />
-        <Location />
+        <Location data={JsonData}/>
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
         <Footer>Copyright © 2025 Sungjo & Vorleak</Footer>

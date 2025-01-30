@@ -63,7 +63,7 @@ export default function CongratulatoryMoney({
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>축하의 마음을 전하세요 - Congratulations</Title>
       </Divider>
-      <Content>축하의 마음을 담아 축의금을 전달해 보세요.
+      <Content>축하의 마음을 담아 축의금을 전달해 보세요.<br/>
       You can express your congratulations by sending a celebratory gift. 🎉💌
 </Content>
       <ContactButton onClick={() => setGroomVisible(true)}>

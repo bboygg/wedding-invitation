@@ -73,8 +73,8 @@ export default function Title({ data }: TitleProps) {
         </GroomBride>
         <Schedule>
           {data?.date}
-          <br />
-          {data?.location}
+          {/* <br />
+          {data?.location} */}
         </Schedule>
       </TitleWrapper>
     </Layout>

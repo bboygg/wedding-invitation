@@ -21,13 +21,28 @@ const Image = styled("img", {
   maxWidth: 1024,
 });
 
-export default function Location() {
+const Address = styled("p", {
+  fontSize: "1.5vh",
+  lineHeight: 1.75,
+  opacity: 0.75,
+  marginBottom: 24,
+});
+
+type LocationProps = {
+  data?: Data;
+};
+
+export default function Location({ data }: LocationProps) {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>Location</Title>
       </Divider>
-      <Image src="./assets/location-tovhesed.png" />
+      <Address>
+          {data?.location}
+        </Address>
+      <Image src="/assets/location-tovhesed.png" alt="Wedding Location" />
     </Wrapper>
+    
   );
 }
