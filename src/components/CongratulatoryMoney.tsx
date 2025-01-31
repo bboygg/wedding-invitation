@@ -5,22 +5,15 @@ import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
 const Wrapper = styled("div", {
-  background: "#efebe9",
-  backgroundImage: "url(./assets/GroovePaper.png)",
+  background: "#fbfbfc",
+  // backgroundImage: "url(./assets/GroovePaper.png)",
   paddingBottom: 18,
   width: "100%",
   textAlign: "center",
 });
 
-const Title = styled("p", {
-  fontSize: "2vh",
-  fontWeight: "bold",
-  opacity: 0.85,
-  marginBottom: 0,
-});
-
 const Content = styled("p", {
-  fontSize: "1.5vh",
+  fontSize: "2vh",
   lineHeight: 1.75,
   opacity: 0.75,
   marginBottom: 24,
@@ -61,7 +54,7 @@ export default function CongratulatoryMoney({
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>축하의 마음을 전하세요 - Congratulations</Title>
+        <h2>Congratulations</h2>
       </Divider>
       <Content>축하의 마음을 담아 축의금을 전달해 보세요.<br/>
       You can express your congratulations by sending a celebratory gift. 🎉💌

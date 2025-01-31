@@ -9,6 +9,14 @@ body {
     "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+h2 {
+  color: #004c4e;
+  font-size: 2.5vh;
+  font-weight: bold;
+  opacity: 0.85;
+  margin-bottom: 0;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;

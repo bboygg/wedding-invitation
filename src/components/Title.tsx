@@ -69,7 +69,7 @@ export default function Title({ data }: TitleProps) {
         YOU ARE INVITED TO OUR WEDDING 🥰
         </WeddingInvitation>
         <GroomBride>
-          {data?.groom?.name} &#38; {data?.bride?.name}
+          Sungjo & Vorleak
         </GroomBride>
         <Schedule>
           {data?.date}

@@ -4,16 +4,17 @@ import { styled } from "@stitches/react";
 import "react-image-gallery/styles/css/image-gallery.css";
 
 const Wrapper = styled("div", {
-  background: "#efebe9",
-  backgroundImage: "url(./assets/GroovePaper.png)",
+  background: "#fbfbfc",
+  // backgroundImage: "url(./assets/GroovePaper.png)",
   width: "100%",
 });
 
-const Title = styled("p", {
+const Content = styled("p", {
   fontSize: "2vh",
-  fontWeight: "bold",
-  opacity: 0.85,
-  marginBottom: 0,
+  lineHeight: 1.75,
+  opacity: 0.75,
+  marginBottom: 24,
+  textAlign: "center",
 });
 
 const images = [
@@ -59,8 +60,12 @@ export default function Gallery() {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>우리의 아름다운 순간 - Our Beautiful Moments</Title>
+        <h2>Our Beautiful Moments</h2>
       </Divider>
+      <Content>A glimpse of our journey leading up to the big day!
+        <br/>
+        우리의 아름다운 순간
+      </Content>
       <ImageGallery
         showPlayButton={false}
         showFullscreenButton={false}

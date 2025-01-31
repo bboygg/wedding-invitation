@@ -2,16 +2,9 @@ import { styled } from "@stitches/react";
 import { Divider } from "antd";
 
 const Wrapper = styled("div", {
-  background: "#efebe9",
-  backgroundImage: "url(./assets/GroovePaper.png)",
+  background: "#fbfbfc",
+  // backgroundImage: "url(./assets/GroovePaper.png)",
   width: "100%",
-});
-
-const Title = styled("p", {
-  fontSize: "2vh",
-  fontWeight: "bold",
-  opacity: 0.85,
-  marginBottom: 0,
 });
 
 const Content = styled("div", {
@@ -40,7 +33,7 @@ export default function Greeting({ data }: GreetingProps) {
   return (
     <Wrapper>
       <Divider style={{ marginTop: 0, marginBottom: 32 }} plain>
-        <Title>WE ARE GETTING MARRIED</Title>
+        <h2>Wedding Details</h2>
       </Divider>
       <Content>
         {data?.greeting?.split("\n")?.map((value, index) => {

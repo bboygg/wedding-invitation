@@ -11,18 +11,11 @@ declare global {
 }
 
 const Wrapper = styled("div", {
-  background: "#efebe9",
-  backgroundImage: "url(./assets/GroovePaper.png)",
+  background: "#fbfbfc",
+  // backgroundImage: "url(./assets/GroovePaper.png)",
   width: "100%",
   paddingBottom: 42,
   textAlign: "center",
-});
-
-const Title = styled("p", {
-  fontSize: "2vh",
-  fontWeight: "bold",
-  opacity: 0.85,
-  marginBottom: 0,
 });
 
 const KakaoTalkShareButton = styled(Button, {
@@ -42,17 +35,19 @@ const KakaoTalkShareButton = styled(Button, {
 });
 
 const LinkShareButton = styled(Button, {
-  background: "#53acee",
-  borderColor: "#53acee",
+  background: "#00898a",
+  borderColor: "#00898a",
   color: "#ffffff",
   "&:hover": {
-    backgroundColor: "#9fcbed !important",
-    borderColor: "#9fcbed !important",
+    backgroundColor: "#00898a !important",
+    borderColor: "#00898a !important",
+    opacity: 0.7,
     color: "#ffffff !important",
   },
   "&:focus": {
-    backgroundColor: "#9fcbed !important",
-    borderColor: "#9fcbed !important",
+    backgroundColor: "#00898a !important",
+    borderColor: "#00898a !important",
+    opacity: 0.7,
     color: "#ffffff !important",
   },
 });
@@ -103,8 +98,9 @@ export default function Share({ data }: ShareProps) {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>청첩장 공유하기 - Share Wedding Invitation</Title>
+        <h2>Share the Love 💖</h2>
       </Divider>
+      <p>Share the wedding invitation using the links below.</p>
       <KakaoTalkShareButton
         style={{ margin: 8 }}
         icon={<MessageFilled />}
