@@ -16,11 +16,7 @@ const TitleWrapper = styled("div", {
   left: "50%",
   transform: "translate(-50%, -50%)",
   textAlign: "center",
-  // textShadow: "-1px 0 #9e9e9e, 0 1px #9e9e9e, 1px 0 #9e9e9e, 0 -1px #9e9e9e",
-  animation: "fadein 3s",
-  "-moz-animation": "fadein 3s" /* Firefox */,
-  "-webkit-animation": "fadein 3s" /* Safari and Chrome */,
-  "-o-animation": "fadein 3s" /* Opera */,
+  marign: 0,
 });
 
 const VideoBackground = styled("video", {
@@ -35,23 +31,26 @@ const VideoBackground = styled("video", {
 
 const WeddingInvitation = styled("p", {
   fontSize: "2vh",
-  fontWeight: "bold",
-  backgroundColor: "rgba(255, 165, 0, 0.6)", // Text background color
-  padding: "8px 16px", // Adds space inside the box
+  backgroundColor: "#004c4e", // Text background color
+  padding: "10px 16px", // Adds space inside the box
   borderRadius: "8px", // Rounded corners
   display: "inline-block", // Ensures background wraps around the text
   color: "white", // Ensure text is readable
 });
 
 const GroomBride = styled("p", {
-  fontSize: "4vh",
-  textTransform: "uppercase",
-  marginBottom: 8,
+  fontSize: "8vh",
+  marginBottom: 0,
+  marginTop: 0, // Reset any top margin
+  marginLeft: 0, // Reset any left margin
+  marginRight: 0, // Reset any right margin
+  textShadow: "1px 0 10px #004c4e", // text-shadow 
 });
 
 const Schedule = styled("p", {
   fontSize: "2vh",
-  marginBottom: 24,
+  marginBottom: 10,
+  textShadow: "1px 0 10px #004c4e", // text-shadow 
 });
 
 type TitleProps = {
@@ -65,16 +64,14 @@ export default function Title({ data }: TitleProps) {
         <source src="./assets/Breaking.mp4" type="video/mp4" />
       </VideoBackground>
       <TitleWrapper style={{ color: "white" }}>
-        <WeddingInvitation>
+        <WeddingInvitation className="oswald">
         YOU ARE INVITED TO OUR WEDDING 🥰
         </WeddingInvitation>
-        <GroomBride>
+        <GroomBride className="alex-brush">
           Sungjo & Vorleak
         </GroomBride>
         <Schedule>
           {data?.date}
-          {/* <br />
-          {data?.location} */}
         </Schedule>
       </TitleWrapper>
     </Layout>

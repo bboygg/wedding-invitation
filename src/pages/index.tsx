@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { Noto_Sans_KR } from "next/font/google";
+import { Alex_Brush } from "next/font/google";
 import dynamic from "next/dynamic";
 import { styled } from "@stitches/react";
 import JsonData from "@/data.json";
@@ -16,11 +17,17 @@ const CongratulatoryMoney = dynamic(
 );
 const Share = dynamic(() => import("@/components/Share"), { ssr: false });
 
-const notoSansKR = Noto_Sans_KR({
-  weight: ["400", "700"],
-  subsets: [],
-  style: "normal",
-});
+// const notoSansKR = Noto_Sans_KR({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+//   style: "normal",
+// });
+
+// const alexBrush = Alex_Brush({ 
+//   weight: "400", 
+//   subsets: ["latin"],
+//   style: "normal"
+// });
 
 const Footer = styled("footer", {
   background: "#004c4e",
@@ -58,11 +65,12 @@ export default function Home() {
           property="og:url"
           content=""
         />
-        <meta name="theme-color" content="#BCAAA4" />
+        <meta name="theme-color" content="#fbfbfc" />
         <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='90' font-size='90'%3E💍%3C/text%3E%3C/svg%3E" />
         <title>Sungjo ❤ Vorleak Wedding</title>
+
       </Head>
-      <main className={`${notoSansKR.className}`}>
+      <main>
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
         <Title data={JsonData} />
         <Greeting data={JsonData} />

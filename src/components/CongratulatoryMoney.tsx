@@ -5,31 +5,25 @@ import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
 const Wrapper = styled("div", {
-  background: "#fbfbfc",
-  // backgroundImage: "url(./assets/GroovePaper.png)",
   paddingBottom: 18,
   width: "100%",
   textAlign: "center",
 });
 
 const Content = styled("p", {
-  fontSize: "2vh",
-  lineHeight: 1.75,
-  opacity: 0.75,
+  // fontSize: "2vh",
+  // lineHeight: 1.75,
+  // opacity: 0.75,
   marginBottom: 24,
 });
 
 const SubContent = styled("p", {
-  fontSize: "1.3vh",
+  fontSize: "1.5vh",
   lineHeight: 1.75,
-  opacity: 0.75,
   marginBottom: 24,
 });
 
 const Description = styled("p", {
-  fontSize: "1.3vh",
-  lineHeight: 1.75,
-  opacity: 0.65,
   marginTop: 8,
 });
 
@@ -61,7 +55,7 @@ export default function CongratulatoryMoney({
 </Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
         <CheckCircleTwoTone
-          style={{ fontSize: 64, marginBottom: 16 }}
+          style={{ fontSize: 60, marginBottom: 16 }}
           twoToneColor="#829fe0"
         />
         <br />
@@ -69,7 +63,7 @@ export default function CongratulatoryMoney({
       </ContactButton>
       <ContactButton onClick={() => setBrideVisible(true)}>
         <CheckCircleTwoTone
-          style={{ fontSize: 64, marginBottom: 16 }}
+          style={{ fontSize: 60, marginBottom: 16 }}
           twoToneColor="#fe7daf"
         />
         <br />

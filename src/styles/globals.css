@@ -1,3 +1,6 @@
+/* Import Alex Brush Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Noto+Serif+KR:wght@200..900&family=Oswald:wght@200..700&display=swap');
+
 html,
 body {
   padding: 0;
@@ -5,16 +8,26 @@ body {
 }
 
 * {
-  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Noto Serif KR','Segoe UI', 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', "Noto Color Emoji",  -apple-system, BlinkMacSystemFont;
+}
+
+p { 
+  font-size: 2vh;
+  line-height: 2;
 }
 
 h2 {
-  color: #004c4e;
-  font-size: 2.5vh;
-  font-weight: bold;
-  opacity: 0.85;
-  margin-bottom: 0;
+  font-family: "Alex Brush", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color:#00898a;
+  font-size: 4vh;
+}
+
+.alex-brush {
+  font-family: 'Alex Brush', cursive;
+}
+
+.oswald {
+  font-family: 'Oswald', cursive;
 }
 
 @keyframes fadein {

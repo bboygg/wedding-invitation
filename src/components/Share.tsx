@@ -11,8 +11,6 @@ declare global {
 }
 
 const Wrapper = styled("div", {
-  background: "#fbfbfc",
-  // backgroundImage: "url(./assets/GroovePaper.png)",
   width: "100%",
   paddingBottom: 42,
   textAlign: "center",
@@ -98,9 +96,9 @@ export default function Share({ data }: ShareProps) {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <h2>Share the Love 💖</h2>
+        <h2>Share the Love</h2>
       </Divider>
-      <p>Share the wedding invitation using the links below.</p>
+      <p>Share the wedding invitation using the links below. 💌</p>
       <KakaoTalkShareButton
         style={{ margin: 8 }}
         icon={<MessageFilled />}
