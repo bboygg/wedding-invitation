@@ -177,7 +177,7 @@ export default function CongratulatoryMoney({
         )} */}
         {data?.bride && (
           <div>
-            <b>신부) {data?.bride?.name}</b>
+            <b>신부) {data?.bride?.last_name}{data?.bride?.first_name}</b>
             <Divider type="vertical" />
             <CopyToClipboard text={data?.bride?.account_number}>
               <Button
