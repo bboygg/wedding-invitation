@@ -90,7 +90,7 @@ export default function Title({ data }: TitleProps) {
         <WeddingInvitation className="oswald">
         YOU ARE INVITED TO OUR WEDDING 🥰
         </WeddingInvitation>
-        <GroomBride className="alex-brush" style={{ padding: "0 10px" }}>
+        <GroomBride className="alex-brush" style={{ padding: "0 5px" }}>
         {data?.groom?.first_name} & {data?.bride?.first_name}
         </GroomBride>
         <Schedule>
