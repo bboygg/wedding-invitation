@@ -3,7 +3,8 @@ type Data = {
   location: string;
   greeting: string;
   groom: {
-    name: string;
+    last_name: string;
+    first_name: string;
     account_number: string;
     parents: {
       mother: {
@@ -17,7 +18,8 @@ type Data = {
     };
   };
   bride: {
-    name: string;
+    last_name: string;
+    first_name: string;
     account_number: string;
     parents: {
       mother: {

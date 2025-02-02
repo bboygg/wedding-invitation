@@ -17,18 +17,6 @@ const CongratulatoryMoney = dynamic(
 );
 const Share = dynamic(() => import("@/components/Share"), { ssr: false });
 
-// const notoSansKR = Noto_Sans_KR({
-//   weight: ["400", "700"],
-//   subsets: ["latin"],
-//   style: "normal",
-// });
-
-// const alexBrush = Alex_Brush({ 
-//   weight: "400", 
-//   subsets: ["latin"],
-//   style: "normal"
-// });
-
 const Footer = styled("footer", {
   background: "#004c4e",
   color: "#fff",
