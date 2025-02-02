@@ -90,7 +90,9 @@ export default function Share({ data }: ShareProps) {
       try {
         const apiToken =
           process.env.NEXT_PUBLIC_KAKAO_API_TOKEN || data?.kakaotalk?.api_token;
+        if (window.Kakao && !window.Kakao.isInitialized()) {
           window.Kakao.init(apiToken);
+        }
       } catch (error) {
         console.error("Kakao init error", error);
       }

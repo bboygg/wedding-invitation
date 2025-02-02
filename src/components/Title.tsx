@@ -16,7 +16,7 @@ const TitleWrapper = styled("div", {
   left: "50%",
   transform: "translate(-50%, -50%)",
   textAlign: "center",
-  marign: 0,
+  margin: 0,
 });
 
 const VideoBackground = styled("video", {
@@ -27,12 +27,27 @@ const VideoBackground = styled("video", {
   width: "100%",
   height: "100%",
   minHeight: 480,
+
+  // Desktop by default
+  display: "block",
+
+  "@media (max-width: 768px)": {
+    display: "none", // Hide on mobile
+  },
+});
+
+const MobileVideoBackground = styled(VideoBackground, {
+  display: "none", // Hidden by default
+
+  "@media (max-width: 768px)": {
+    display: "block", // Show on mobile
+  },
 });
 
 const WeddingInvitation = styled("p", {
   fontSize: "2vh",
   backgroundColor: "#004c4e", // Text background color
-  padding: "10px 16px", // Adds space inside the box
+  padding: "6px 10px", // Adds space inside the box
   borderRadius: "8px", // Rounded corners
   display: "inline-block", // Ensures background wraps around the text
   color: "white", // Ensure text is readable
@@ -60,9 +75,17 @@ type TitleProps = {
 export default function Title({ data }: TitleProps) {
   return (
     <Layout>
-      <VideoBackground autoPlay loop muted playsInline={true}>
+
+      {/* Desktop Video */}
+      <VideoBackground autoPlay loop muted playsInline>
         <source src="./assets/Breaking.mp4" type="video/mp4" />
       </VideoBackground>
+
+      {/* Mobile Video */}
+      <MobileVideoBackground autoPlay loop muted playsInline>
+        <source src="./assets/MobileVideo.mp4" type="video/mp4" />
+      </MobileVideoBackground>
+
       <TitleWrapper style={{ color: "white" }}>
         <WeddingInvitation className="oswald">
         YOU ARE INVITED TO OUR WEDDING 🥰
