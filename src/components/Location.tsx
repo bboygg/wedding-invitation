@@ -5,8 +5,6 @@ const Wrapper = styled("div", {
   width: "100%",
   paddingBottom: 42,
   textAlign: "center",
-  paddingLeft: "16px",   // Add left padding
-  paddingRight: "16px",  // Add right padding
 });
 
 const Image = styled("img", {
