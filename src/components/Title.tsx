@@ -17,6 +17,8 @@ const TitleWrapper = styled("div", {
   transform: "translate(-50%, -50%)",
   textAlign: "center",
   margin: 0,
+  paddingLeft: "16px",   // Add left padding
+  paddingRight: "16px",  // Add right padding
 });
 
 const VideoBackground = styled("video", {

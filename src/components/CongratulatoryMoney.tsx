@@ -11,6 +11,8 @@ const Wrapper = styled("div", {
   paddingBottom: 18,
   width: "100%",
   textAlign: "center",
+  paddingLeft: "16px",   // Add left padding
+  paddingRight: "16px",  // Add right padding
 });
 
 const Content = styled("p", {
