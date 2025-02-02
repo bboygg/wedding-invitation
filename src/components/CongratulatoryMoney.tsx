@@ -3,6 +3,9 @@ import { styled } from "@stitches/react";
 import { Button, Divider, Modal, message } from "antd";
 import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCopy } from '@fortawesome/free-regular-svg-icons';
+
 
 const Wrapper = styled("div", {
   paddingBottom: 18,
@@ -11,9 +14,6 @@ const Wrapper = styled("div", {
 });
 
 const Content = styled("p", {
-  // fontSize: "2vh",
-  // lineHeight: 1.75,
-  // opacity: 0.75,
   marginBottom: 24,
 });
 
@@ -105,7 +105,7 @@ export default function CongratulatoryMoney({
                 style={{ padding: 0, margin: 0 }}
                 onClick={() => message.success("계좌번호가 복사되었습니다. \n Account number has been copied.")}
               >
-                {data?.groom?.parents?.mother.account_number}
+                {data?.groom?.parents?.mother.account_number}&nbsp;<FontAwesomeIcon icon={faCopy} />
               </Button>
             </CopyToClipboard>
           </div>
@@ -120,7 +120,7 @@ export default function CongratulatoryMoney({
                 style={{ padding: 0, margin: 0 }}
                 onClick={() => message.success("계좌번호가 복사되었습니다. Account number has been copied.")}
               >
-                {data?.groom?.account_number}
+                {data?.groom?.account_number}&nbsp;<FontAwesomeIcon icon={faCopy} />
               </Button>
             </CopyToClipboard>
           </div>
@@ -183,9 +183,9 @@ export default function CongratulatoryMoney({
               <Button
                 type="text"
                 style={{ padding: 0, margin: 0 }}
-                onClick={() => message.success("계좌번호가 복사되었습니다.")}
+                onClick={() => message.success("계좌번호가 복사되었습니다. Account number has been copied.")}
               >
-                {data?.bride?.account_number}
+                {data?.bride?.account_number}&nbsp;<FontAwesomeIcon icon={faCopy} />
               </Button>
             </CopyToClipboard>
           </div>

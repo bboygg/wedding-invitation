@@ -63,8 +63,8 @@ export default function Share({ data }: ShareProps) {
         objectType: "feed",
         container: "#sendKakao",
         content: {
-          title: `${data?.groom?.name}❤${data?.bride?.name} 결혼식에 초대합니다`,
-          description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요. 🤵👰 Please click the 'Open Wedding Invitation' button below to read it.🤵👰",
+          title: `${data?.groom?.first_name}❤${data?.bride?.first_name} 결혼식에 초대합니다`,
+          description: "아래의 버튼을 눌러 읽어주세요. Click the button below to open the wedding inivation. 🤵👰",
           imageUrl: data?.kakaotalk?.share_image,
           link: {
             mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
@@ -88,8 +88,12 @@ export default function Share({ data }: ShareProps) {
       }, 100);
     } else {
       try {
-        window.Kakao.init(data?.kakaotalk?.api_token);
-      } catch {}
+        const apiToken =
+          process.env.NEXT_PUBLIC_KAKAO_API_TOKEN || data?.kakaotalk?.api_token;
+          window.Kakao.init(apiToken);
+      } catch (error) {
+        console.error("Kakao init error", error);
+      }
     }
   }, [shareCount]);
 
@@ -106,7 +110,7 @@ export default function Share({ data }: ShareProps) {
         size="large"
         onClick={() => setShareCount(shareCount + 1)}
       >
-        카카오톡으로 공유하기 / Share on KakaoTalk
+        Share on KakaoTalk
       </KakaoTalkShareButton>
       <CopyToClipboard text={data?.kakaotalk?.wedding_invitation_url ?? ""}>
         <LinkShareButton
@@ -115,7 +119,7 @@ export default function Share({ data }: ShareProps) {
           size="large"
           onClick={() => message.success("청첩장 링크가 복사되었습니다. The wedding invitation link has been copied.")}
         >
-          링크로 공유하기 / Share Link
+          Copy Link
         </LinkShareButton>
       </CopyToClipboard>
     </Wrapper>

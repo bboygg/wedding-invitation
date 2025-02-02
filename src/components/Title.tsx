@@ -68,7 +68,7 @@ export default function Title({ data }: TitleProps) {
         YOU ARE INVITED TO OUR WEDDING 🥰
         </WeddingInvitation>
         <GroomBride className="alex-brush">
-          Sungjo & Vorleak
+        {data?.groom?.first_name} & {data?.bride?.first_name}
         </GroomBride>
         <Schedule>
           {data?.date}

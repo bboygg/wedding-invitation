@@ -3,8 +3,9 @@
   "location": "TOV HESED \n 서울특별시 강남구 도산대로38길 32 (논현동)",
   "greeting": "We are so excited to celebrate this special day with you. \n Please join us as we begin this new chapter together!",
   "groom": {
-    "name": "Sungjo Go",
-    "account_number": "신한은행 ***-***-******",
+    "first_name": "Sungjo",
+    "last_name": "Go",
+    "account_number": "신한은행 110-392-269319",
     "parents": {
       "mother": {
         "name": "권재순",
@@ -17,7 +18,8 @@
     }
   },
   "bride": {
-    "name": "Long-Vorleak Hok",
+    "first_name": "Vorleak",
+    "last_name": "Hok Long-",
     "account_number": "신한은행 110-***-******",
     "parents": {
       "mother": {
@@ -32,7 +34,7 @@
   },
   "kakaotalk": {
     "api_token": "",
-    "wedding_invitation_url": "",
-    "share_image": ""
+    "wedding_invitation_url": "https://www.sungjo-weds-vorleak.com",
+    "share_image": "https://www.sungjo-weds-vorleak.com/assets/photo-4.jpg"
   }
 }
