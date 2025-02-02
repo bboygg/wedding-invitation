@@ -43,7 +43,7 @@ const LinkShareButton = styled(Button, {
     color: "#ffffff !important",
   },
   "&:focus": {
-    backgroundColor: "#00898a !important",
+    background: "#00898a !important",
     borderColor: "#00898a !important",
     opacity: 0.7,
     color: "#ffffff !important",
@@ -59,37 +59,48 @@ export default function Share({ data }: ShareProps) {
 
   useEffect(() => {
     if (shareCount !== 0) {
-      window.Kakao.Link.createDefaultButton({
-        objectType: "feed",
-        container: "#sendKakao",
-        content: {
-          title: `${data?.groom?.first_name} ❤ ${data?.bride?.first_name} 결혼식에 초대합니다`,
-          description: "Click on '청첩장 열기' to open the wedding invitation. 🤵👰",
-          imageUrl: data?.kakaotalk?.share_image,
-          link: {
-            mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
-            webUrl: data?.kakaotalk?.wedding_invitation_url,
-          },
-        },
-        buttons: [
-          {
-            title: "청첩장 열기",
+      // Ensure Kakao and its Link API are available before calling createDefaultButton
+      if (
+        window.Kakao &&
+        window.Kakao.Link &&
+        typeof window.Kakao.Link.createDefaultButton === "function"
+      ) {
+        window.Kakao.Link.createDefaultButton({
+          objectType: "feed",
+          container: "#sendKakao",
+          content: {
+            title: `${data?.groom?.name}❤${data?.bride?.name} 결혼식에 초대합니다`,
+            description:
+              "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요. 🤵👰 Please click the 'Open Wedding Invitation' button below to read it.🤵👰",
+            imageUrl: data?.kakaotalk?.share_image,
             link: {
               mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
               webUrl: data?.kakaotalk?.wedding_invitation_url,
             },
           },
-        ],
-        installTalk: true,
-      });
-      setTimeout(() => {
-        document.getElementById("sendKakao")?.click();
-        message.success("카카오톡으로 청첩장을 공유합니다!");
-      }, 100);
+          buttons: [
+            {
+              title: "청첩장 열기",
+              link: {
+                mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
+                webUrl: data?.kakaotalk?.wedding_invitation_url,
+              },
+            },
+          ],
+          installTalk: true,
+        });
+        setTimeout(() => {
+          document.getElementById("sendKakao")?.click();
+          message.success("카카오톡으로 청첩장을 공유합니다!");
+        }, 100);
+      } else {
+        console.error("Kakao Link API is not available.");
+      }
     } else {
       try {
         const apiToken =
           process.env.NEXT_PUBLIC_KAKAO_API_TOKEN || data?.kakaotalk?.api_token;
+        // Check that Kakao is loaded before initializing
         if (window.Kakao && !window.Kakao.isInitialized()) {
           window.Kakao.init(apiToken);
         }
@@ -97,7 +108,7 @@ export default function Share({ data }: ShareProps) {
         console.error("Kakao init error", error);
       }
     }
-  }, [shareCount]);
+  }, [shareCount, data]);
 
   return (
     <Wrapper>
@@ -110,18 +121,22 @@ export default function Share({ data }: ShareProps) {
         icon={<MessageFilled />}
         id="sendKakao"
         size="large"
-        onClick={() => setShareCount(shareCount + 1)}
+        onClick={() => setShareCount((prev) => prev + 1)}
       >
-        Share on KakaoTalk
+        카카오톡으로 공유하기 / Share on KakaoTalk
       </KakaoTalkShareButton>
       <CopyToClipboard text={data?.kakaotalk?.wedding_invitation_url ?? ""}>
         <LinkShareButton
           style={{ margin: 8 }}
           icon={<LinkOutlined />}
           size="large"
-          onClick={() => message.success("청첩장 링크가 복사되었습니다. The wedding invitation link has been copied.")}
+          onClick={() =>
+            message.success(
+              "청첩장 링크가 복사되었습니다. The wedding invitation link has been copied."
+            )
+          }
         >
-          Copy Link
+          링크로 공유하기 / Share Link
         </LinkShareButton>
       </CopyToClipboard>
     </Wrapper>

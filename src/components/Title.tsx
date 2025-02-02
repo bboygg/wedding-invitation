@@ -56,10 +56,15 @@ const WeddingInvitation = styled("p", {
 const GroomBride = styled("p", {
   fontSize: "8vh",
   marginBottom: 0,
-  marginTop: 0, // Reset any top margin
-  marginLeft: 0, // Reset any left margin
-  marginRight: 0, // Reset any right margin
-  textShadow: "1px 0 10px #004c4e", // text-shadow 
+  marginTop: 0,
+  marginLeft: 0,
+  marginRight: 0,
+  textShadow: "1px 0 10px #004c4e",
+
+  // Responsive font size for mobile
+  "@media (max-width: 768px)": {
+    fontSize: "6vh",
+  },
 });
 
 const Schedule = styled("p", {
@@ -90,7 +95,7 @@ export default function Title({ data }: TitleProps) {
         <WeddingInvitation className="oswald">
         YOU ARE INVITED TO OUR WEDDING 🥰
         </WeddingInvitation>
-        <GroomBride className="alex-brush" style={{ padding: "0 5px" }}>
+        <GroomBride className="alex-brush">
         {data?.groom?.first_name} & {data?.bride?.first_name}
         </GroomBride>
         <Schedule>
