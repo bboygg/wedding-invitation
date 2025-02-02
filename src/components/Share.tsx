@@ -69,7 +69,7 @@ export default function Share({ data }: ShareProps) {
           objectType: "feed",
           container: "#sendKakao",
           content: {
-            title: `${data?.groom?.name}❤${data?.bride?.name} 결혼식에 초대합니다`,
+            title: `${data?.groom?.last_name}❤${data?.bride?.last_name} 결혼식에 초대합니다`,
             description:
               "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요. 🤵👰 Please click the 'Open Wedding Invitation' button below to read it.🤵👰",
             imageUrl: data?.kakaotalk?.share_image,
