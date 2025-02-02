@@ -75,7 +75,13 @@
 npm install
 # run dev server 
 npm run dev
-# kill 
+# kill the server 
+ctrl + C 
 
-
+# git add changes 
+git add -A # add all the changes 
+# git commit 
+git commit -m "msg..."
+# git push 
+git push 
 ```
