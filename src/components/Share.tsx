@@ -33,6 +33,7 @@ const KakaoTalkShareButton = styled(Button, {
 });
 
 const LinkShareButton = styled(Button, {
+  fontFamily: "'Oswald', sans-serif",
   background: "#00898a",
   borderColor: "#00898a",
   color: "#ffffff",
@@ -71,7 +72,7 @@ export default function Share({ data }: ShareProps) {
           content: {
             title: `${data?.groom?.first_name}❤${data?.bride?.first_name} 결혼식에 초대합니다`,
             description:
-              "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요. 🤵👰 Please click the 'Open Wedding Invitation' button below to read it.🤵👰",
+              "Click the button below to open the wedding invitation it.🤵👰",
             imageUrl: data?.kakaotalk?.share_image,
             link: {
               mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
@@ -91,7 +92,7 @@ export default function Share({ data }: ShareProps) {
         });
         setTimeout(() => {
           document.getElementById("sendKakao")?.click();
-          message.success("카카오톡으로 청첩장을 공유합니다!");
+          message.success("카카오톡으로 청첩장을 공유합니다! Share wedding invitation through KakaoTalk!");
         }, 100);
       } else {
         console.error("Kakao Link API is not available.");
@@ -117,13 +118,14 @@ export default function Share({ data }: ShareProps) {
       </Divider>
       <p>Share the wedding invitation using the links below. 💌</p>
       <KakaoTalkShareButton
+        className = "oswald"
         style={{ margin: 8 }}
         icon={<MessageFilled />}
         id="sendKakao"
         size="large"
         onClick={() => setShareCount((prev) => prev + 1)}
       >
-        카카오톡으로 공유하기 / Share on KakaoTalk
+        Share on KakaoTalk
       </KakaoTalkShareButton>
       <CopyToClipboard text={data?.kakaotalk?.wedding_invitation_url ?? ""}>
         <LinkShareButton
@@ -136,7 +138,7 @@ export default function Share({ data }: ShareProps) {
             )
           }
         >
-          링크로 공유하기 / Share Link
+          Share Link
         </LinkShareButton>
       </CopyToClipboard>
     </Wrapper>

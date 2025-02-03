@@ -45,21 +45,15 @@ const MobileVideoBackground = styled(VideoBackground, {
 });
 
 const WeddingInvitation = styled("p", {
-  fontSize: "2vh",
-  backgroundColor: "#004c4e", // Text background color
-  padding: "6px 10px", // Adds space inside the box
-  borderRadius: "8px", // Rounded corners
-  display: "inline-block", // Ensures background wraps around the text
-  color: "white", // Ensure text is readable
+  fontSize: "2.2vh",
+  color: "white", 
+  textShadow: "1px 0 15px #004c4e", // Ensure text is readable
 });
 
 const GroomBride = styled("p", {
   fontSize: "8vh",
-  marginBottom: 0,
-  marginTop: 0,
-  marginLeft: 0,
-  marginRight: 0,
-  textShadow: "1px 0 10px #004c4e",
+  margin: 0,
+  textShadow: "1px 0 15px #004c4e",
 
   // Responsive font size for mobile
   "@media (max-width: 768px)": {
@@ -68,9 +62,8 @@ const GroomBride = styled("p", {
 });
 
 const Schedule = styled("p", {
-  fontSize: "2vh",
-  marginBottom: 10,
-  textShadow: "1px 0 10px #004c4e", // text-shadow 
+  fontSize: "2.2vh",
+  textShadow: "1px 0 15px #004c4e", // text-shadow 
 });
 
 type TitleProps = {
