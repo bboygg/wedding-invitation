@@ -9,7 +9,6 @@ const Content = styled("div", {
   marginBottom: 10,
   width: "100%",
   textAlign: "center",
-  padding: "0px 10px",
 });
 
 const GroomBride = styled("p", {
