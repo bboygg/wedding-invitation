@@ -26,6 +26,7 @@ const SubContent = styled("p", {
 
 const Description = styled("p", {
   marginTop: 8,
+  fontSize: "1.5vh",
 });
 
 const ContactButton = styled("div", {
@@ -51,9 +52,9 @@ export default function CongratulatoryMoney({
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <h2>Congratulations</h2>
       </Divider>
-      <Content className="container">>축하의 마음을 담아 축의금을 전달해 보세요.<br/>
+      <Content>축하의 마음을 담아 축의금을 전달해 보세요.<br/>
       You can express your congratulations by sending a celebratory gift. 🎉💌
-</Content>
+      </Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
         <CheckCircleTwoTone
           style={{ fontSize: 60, marginBottom: 16 }}
@@ -104,7 +105,7 @@ export default function CongratulatoryMoney({
               <Button
                 type="text"
                 style={{ padding: 0, margin: 0 }}
-                onClick={() => message.success("계좌번호가 복사되었습니다. \n Account number has been copied.")}
+                onClick={() => message.success("계좌번호가 복사되었습니다. Account number has been copied.")}
               >
                 {data?.groom?.parents?.mother.account_number}&nbsp;<FontAwesomeIcon icon={faCopy} />
               </Button>
@@ -128,7 +129,7 @@ export default function CongratulatoryMoney({
         )}
         <div>
           <Description>
-            계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.
+            계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.<br/>
             When you click on the account number, it is copied as text that can be pasted.
           </Description>
         </div>
@@ -193,7 +194,8 @@ export default function CongratulatoryMoney({
         )}
         <div>
           <Description>
-            계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다. When you click on the account number, it is copied as text that can be pasted.
+            계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다. <br/>
+            When you click on the account number, it is copied as text that can be pasted.
           </Description>
         </div>
       </Modal>
