@@ -14,6 +14,7 @@ const Image = styled("img", {
 
 const Address = styled("p", {
   marginBottom: 24,
+  padding: "0px 10px",
 });
 
 type LocationProps = {

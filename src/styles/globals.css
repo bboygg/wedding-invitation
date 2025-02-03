@@ -7,10 +7,6 @@ body {
   margin: 0;
 }
 
-.container {
-  padding: 0px 10px; /* Apply to specific divs with the class 'wrapper' */
-}
-
 body, p, h1, h3, h4, h5, h6 {
   font-family: 'Noto Serif KR', 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', -apple-system, BlinkMacSystemFont;
 }

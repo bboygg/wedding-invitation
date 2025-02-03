@@ -15,6 +15,7 @@ const Wrapper = styled("div", {
 
 const Content = styled("p", {
   marginBottom: 24,
+  padding: "0px 10px",
 });
 
 const SubContent = styled("p", {

@@ -9,6 +9,7 @@ const Content = styled("div", {
   marginBottom: 10,
   width: "100%",
   textAlign: "center",
+  padding: "0px 10px",
 });
 
 const GroomBride = styled("p", {
@@ -37,7 +38,7 @@ export default function Greeting({ data }: GreetingProps) {
           );
         })}
       </Content>
-      <GroomBride className="container">>
+      <GroomBride className="container">
         {data?.groom?.parents?.father?.name} ·{" "}
         {data?.groom?.parents?.mother?.name}의 차남 고성조 ({data?.groom?.last_name} {data?.groom?.first_name})
         <br />
