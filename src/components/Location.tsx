@@ -26,7 +26,7 @@ export default function Location({ data }: LocationProps) {
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <h2>Event Information</h2>
       </Divider>
-      <Address>
+      <Address className="container">
           {data?.location}
         </Address>
       <Image src="/assets/location-tovhesed.png" alt="Wedding Location" />

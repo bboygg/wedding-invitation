@@ -37,7 +37,7 @@ export default function Greeting({ data }: GreetingProps) {
           );
         })}
       </Content>
-      <GroomBride>
+      <GroomBride className="container">>
         {data?.groom?.parents?.father?.name} ·{" "}
         {data?.groom?.parents?.mother?.name}의 차남 고성조 ({data?.groom?.last_name} {data?.groom?.first_name})
         <br />
