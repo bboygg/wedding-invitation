@@ -1,6 +1,5 @@
 import { styled } from "@stitches/react";
 import { Divider, Button } from "antd";
-import Image from "next/image";
 
 const Wrapper = styled("div", {
   width: "100%",
