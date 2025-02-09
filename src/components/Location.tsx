@@ -8,8 +8,8 @@ const Wrapper = styled("div", {
 });
 
 const Image = styled("img", {
-  width: "600px",
-  height: "600px",
+  maxWidth: "600px",
+  width: "80%",
 });
 
 const Address = styled("p", {
@@ -63,6 +63,8 @@ export default function Location({ data }: LocationProps) {
         <h2>Event Information</h2>
       </Divider>
       <Address className="container">
+        {data?.date}
+        <br />
         {data?.location}
       </Address>
       <p>

@@ -12,7 +12,7 @@ declare global {
 
 const Wrapper = styled("div", {
   width: "100%",
-  paddingBottom: 42,
+  paddingBottom: 80,
   textAlign: "center",
 });
 

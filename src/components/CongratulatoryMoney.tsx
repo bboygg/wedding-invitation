@@ -1,4 +1,3 @@
-import { CheckCircleTwoTone } from "@ant-design/icons";
 import { styled } from "@stitches/react";
 import { Button, Divider, Modal, message } from "antd";
 import { useState } from "react";
@@ -8,7 +7,6 @@ import { faCopy } from '@fortawesome/free-regular-svg-icons';
 
 
 const Wrapper = styled("div", {
-  paddingBottom: 18,
   width: "100%",
   textAlign: "center",
 });
@@ -16,6 +14,18 @@ const Wrapper = styled("div", {
 const Content = styled("p", {
   marginBottom: 24,
   padding: "0px 10px",
+});
+
+const RedEnvelopeIcon = styled("span", {
+  fontSize: "60px",
+  marginBottom: "10px",
+  display: "inline-block",
+  cursor: "pointer", // indicates that it's clickable
+  transition: "transform 0.2s ease, opacity 0.2s ease", // smooth hover effects
+  "&:hover": {
+    transform: "scale(1.1)",  // slightly scale up on hover
+    opacity: 0.8,             // optionally reduce opacity on hover
+  },
 });
 
 const SubContent = styled("p", {
@@ -56,20 +66,22 @@ export default function CongratulatoryMoney({
       You can express your congratulations by sending a celebratory gift. 🎉💌
       </Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
-        <CheckCircleTwoTone
-          style={{ fontSize: 60, marginBottom: 16 }}
-          twoToneColor="#829fe0"
-        />
+        <RedEnvelopeIcon>🧧</RedEnvelopeIcon>
         <br />
-        <SubContent>신랑측 계좌번호 확인 - Groom </SubContent>
+        <SubContent>
+          신랑측 계좌번호 확인
+          <br />
+          Groom's Account Info
+          </SubContent>
       </ContactButton>
       <ContactButton onClick={() => setBrideVisible(true)}>
-        <CheckCircleTwoTone
-          style={{ fontSize: 60, marginBottom: 16 }}
-          twoToneColor="#fe7daf"
-        />
+        <RedEnvelopeIcon>🧧</RedEnvelopeIcon>
         <br />
-        <SubContent>신부측 계좌번호 확인 - Bride</SubContent>
+        <SubContent>
+          신부측 계좌번호 확인 
+          <br /> 
+          Bride's Account Info
+        </SubContent>
       </ContactButton>
       <Modal
         title={<b>신랑측 계좌번호</b>}
@@ -80,23 +92,6 @@ export default function CongratulatoryMoney({
         okButtonProps={{ style: { display: "none" } }}
         footer={null}
       >
-        {/* {data?.groom?.parents?.father && (
-          <div>
-            <b>부) {data?.groom?.parents?.father?.name}</b>
-            <Divider type="vertical" />
-            <CopyToClipboard
-              text={data?.groom?.parents?.father?.account_number}
-            >
-              <Button
-                type="text"
-                style={{ padding: 0, margin: 0 }}
-                onClick={() => message.success("계좌번호가 복사되었습니다. Account number has been copied.")}
-              >
-                {data?.groom?.parents?.father?.account_number}
-              </Button>
-            </CopyToClipboard>
-          </div>
-        )} */}
         {data?.groom?.parents?.mother && (
           <div style={{ marginTop: 24, marginBottom: 24 }}>
             <b>모) {data?.groom?.parents?.mother.name}</b>
@@ -129,7 +124,8 @@ export default function CongratulatoryMoney({
         )}
         <div>
           <Description>
-            계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.<br/>
+            계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.
+            <br />
             When you click on the account number, it is copied as text that can be pasted.
           </Description>
         </div>
@@ -143,40 +139,6 @@ export default function CongratulatoryMoney({
         okButtonProps={{ style: { display: "none" } }}
         footer={null}
       >
-        {/* {data?.bride?.parents?.father && (
-          <div>
-            <b>부) {data?.bride?.parents?.father?.name}</b>
-            <Divider type="vertical" />
-            <CopyToClipboard
-              text={data?.bride?.parents?.father?.account_number}
-            >
-              <Button
-                type="text"
-                style={{ padding: 0, margin: 0 }}
-                onClick={() => message.success("계좌번호가 복사되었습니다.")}
-              >
-                {data?.bride?.parents?.father?.account_number}
-              </Button>
-            </CopyToClipboard>
-          </div>
-        )} */}
-        {/* {data?.bride?.parents?.mother && (
-          <div style={{ marginTop: 24, marginBottom: 24 }}>
-            <b>모) {data?.bride?.parents?.mother?.name}</b>
-            <Divider type="vertical" />
-            <CopyToClipboard
-              text={data?.bride?.parents?.mother?.account_number}
-            >
-              <Button
-                type="text"
-                style={{ padding: 0, margin: 0 }}
-                onClick={() => message.success("계좌번호가 복사되었습니다.")}
-              >
-                {data?.bride?.parents?.mother?.account_number}
-              </Button>
-            </CopyToClipboard>
-          </div>
-        )} */}
         {data?.bride && (
           <div>
             <b>신부) {data?.bride?.last_name}{data?.bride?.first_name}</b>
@@ -194,7 +156,8 @@ export default function CongratulatoryMoney({
         )}
         <div>
           <Description>
-            계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다. <br/>
+            계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다. 
+            <br/>
             When you click on the account number, it is copied as text that can be pasted.
           </Description>
         </div>

@@ -9,6 +9,7 @@ body {
 
 body, p, h1, h3, h4, h5, h6 {
   font-family: 'Noto Serif KR', 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', -apple-system, BlinkMacSystemFont;
+  color: #26201B;
 }
 
 p { 
@@ -18,9 +19,12 @@ p {
 
 h2 {
   font-family: "Alex Brush", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color:#00898a;
+  color:#D94423;
   font-size: 4vh;
   margin-top: 50px;
+  border: 3px double #D94423;      /* Double border using the same color */
+  border-radius: 8px;             /* Rounded corners */
+  padding: 10px;                   /* Adds some space between the text and the border */
 }
 
 .alex-brush {
