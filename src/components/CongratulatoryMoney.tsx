@@ -65,7 +65,7 @@ export default function CongratulatoryMoney({
       </Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
         <RedEnvelopeIcon>🧧</RedEnvelopeIcon>
-        <br />
+        <br/>
         <SubContent>
           신랑측 계좌번호 확인
           <br />
