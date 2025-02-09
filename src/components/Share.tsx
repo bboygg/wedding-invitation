@@ -1,6 +1,6 @@
 import { LinkOutlined, MessageFilled } from "@ant-design/icons";
 import { styled } from "@stitches/react";
-import { Button, Divider, message } from "antd";
+import { Button, message } from "antd";
 import { useEffect, useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
@@ -113,9 +113,7 @@ export default function Share({ data }: ShareProps) {
 
   return (
     <Wrapper>
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <h2>Share the Love</h2>
-      </Divider>
+      <h2>Share the Love</h2>
       <p>Share the wedding invitation using the links below. 💌</p>
       <KakaoTalkShareButton
         className = "oswald"

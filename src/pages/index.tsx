@@ -1,7 +1,5 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { Noto_Sans_KR } from "next/font/google";
-import { Alex_Brush } from "next/font/google";
 import dynamic from "next/dynamic";
 import { styled } from "@stitches/react";
 import JsonData from "@/data.json";

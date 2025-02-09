@@ -1,5 +1,5 @@
 import { styled } from "@stitches/react";
-import { Button, Divider, Modal, message } from "antd";
+import { Button, Modal, message } from "antd";
 import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -59,9 +59,7 @@ export default function CongratulatoryMoney({
 
   return (
     <Wrapper>
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <h2>Congratulations</h2>
-      </Divider>
+      <h2>Congratulations</h2>
       <Content>축하의 마음을 담아 축의금을 전달해 보세요.<br/>
       You can express your congratulations by sending a celebratory gift. 🎉💌
       </Content>
@@ -95,7 +93,6 @@ export default function CongratulatoryMoney({
         {data?.groom?.parents?.mother && (
           <div style={{ marginTop: 24, marginBottom: 24 }}>
             <b>모) {data?.groom?.parents?.mother.name}</b>
-            <Divider type="vertical" />
             <CopyToClipboard text={data?.groom?.parents?.mother.account_number}>
               <Button
                 type="text"
@@ -110,7 +107,6 @@ export default function CongratulatoryMoney({
         {data?.groom && (
           <div>
             <b>신랑) 고성조</b>
-            <Divider type="vertical" />
             <CopyToClipboard text={data?.groom?.account_number}>
               <Button
                 type="text"
@@ -142,7 +138,6 @@ export default function CongratulatoryMoney({
         {data?.bride && (
           <div>
             <b>신부) {data?.bride?.last_name}{data?.bride?.first_name}</b>
-            <Divider type="vertical" />
             <CopyToClipboard text={data?.bride?.account_number}>
               <Button
                 type="text"

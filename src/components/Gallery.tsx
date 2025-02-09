@@ -1,5 +1,4 @@
 import ImageGallery from "react-image-gallery";
-import { Divider } from "antd";
 import { styled } from "@stitches/react";
 import "react-image-gallery/styles/css/image-gallery.css";
 
@@ -49,9 +48,7 @@ const images = [
 export default function Gallery() {
   return (
     <Wrapper>
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <h2>Our Beautiful Moments</h2>
-      </Divider>
+        <h2>Gallery</h2>
       <ImageGallery
         showPlayButton={false}
         showFullscreenButton={false}

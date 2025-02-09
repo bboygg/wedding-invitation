@@ -1,5 +1,5 @@
 import { styled } from "@stitches/react";
-import { Divider, Button } from "antd";
+  import { Button } from "antd";
 
 const Wrapper = styled("div", {
   width: "100%",
@@ -59,9 +59,7 @@ export function KakaoMapButton() {
 export default function Location({ data }: LocationProps) {
   return (
     <Wrapper>
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <h2>Event Information</h2>
-      </Divider>
       <Address className="container">
         {data?.date}
         <br />

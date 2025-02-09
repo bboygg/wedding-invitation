@@ -45,15 +45,16 @@ const MobileVideoBackground = styled(VideoBackground, {
 });
 
 const WeddingInvitation = styled("p", {
-  fontSize: "2.2vh",
-  color: "white", 
-  textShadow: "1px 0 15px #004c4e", // Ensure text is readable
+  fontSize: "2vh",
+  color: "white",
+  textShadow: "1px 0 10px #D94423", // Ensure text is readable
 });
 
 const GroomBride = styled("p", {
   fontSize: "8vh",
+  color: "#D94423",
   margin: 0,
-  textShadow: "1px 0 15px #004c4e",
+  textShadow: "1px 0 5px #F2E5D5",
 
   // Responsive font size for mobile
   "@media (max-width: 768px)": {
@@ -63,7 +64,8 @@ const GroomBride = styled("p", {
 
 const Schedule = styled("p", {
   fontSize: "2.2vh",
-  textShadow: "1px 0 15px #004c4e", // text-shadow 
+  color: "white",
+  textShadow: "1px 0 10px #D94423", // text-shadow 
 });
 
 type TitleProps = {
@@ -85,7 +87,7 @@ export default function Title({ data }: TitleProps) {
       </MobileVideoBackground>
 
       <TitleWrapper style={{ color: "white" }}>
-        <WeddingInvitation className="oswald">
+        <WeddingInvitation>
         YOU ARE INVITED TO OUR WEDDING 🥰
         </WeddingInvitation>
         <GroomBride className="alex-brush">
