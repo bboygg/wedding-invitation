@@ -1,5 +1,4 @@
 import { styled } from "@stitches/react";
-import { Divider } from "antd";
 
 const Layout = styled("div", {
   width: "100%",

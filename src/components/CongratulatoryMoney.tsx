@@ -69,7 +69,7 @@ export default function CongratulatoryMoney({
         <SubContent>
           신랑측 계좌번호 확인
           <br />
-          Groom's Account Info
+          Groom&apos;s Account Info
           </SubContent>
       </ContactButton>
       <ContactButton onClick={() => setBrideVisible(true)}>
@@ -78,7 +78,7 @@ export default function CongratulatoryMoney({
         <SubContent>
           신부측 계좌번호 확인 
           <br /> 
-          Bride's Account Info
+          Bride&apos;s Account Info
         </SubContent>
       </ContactButton>
       <Modal
