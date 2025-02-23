@@ -9,7 +9,7 @@ body {
 
 body, p, h1, h3, h4, h5, h6 {
   font-family: 'Gowun Batang', 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', -apple-system, BlinkMacSystemFont;
-  color: #26201B;
+  color: #8C6658;
 }
 
 p { 
@@ -18,20 +18,20 @@ p {
 }
 
 h2 {
-  font-family: "Song Myung", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-transform: capitalize;
-  color: #D94423;
-  font-size: 3vh;
+  font-family: "Alex Brush", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #BF3E21;
+  font-size: 3.5vh;
   margin-top: 50px;
-  border: 3px double #D94423;      /* Double border using the same color */
+  border: 3px double #BF3E21;      /* Double border using the same color */
   border-radius: 8px;             /* Rounded corners */
   padding: 5px 20px;              /* Adds some space between the text and the border */
   margin-bottom: 32px;
   text-align: center;
-  max-width: 250px;
+  max-width: 200px;
   margin-left: auto;
   margin-right: auto;
 }
+
 
 .alex-brush {
   font-family: 'Alex Brush', cursive;
@@ -45,30 +45,6 @@ h2 {
     opacity: 1;
   }
 }
-@-moz-keyframes fadein {
-  /* Firefox */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadein {
-  /* Safari and Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes fadein {
-  /* Opera */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+@-moz-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+@-webkit-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+@-o-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }

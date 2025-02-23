@@ -61,12 +61,6 @@ const GroomBride = styled("p", {
   },
 });
 
-const Schedule = styled("p", {
-  fontSize: "2.2vh",
-  color: "white",
-  textShadow: "1px 0 10px #D94423", // text-shadow 
-});
-
 type TitleProps = {
   data?: Data;
 };
@@ -92,9 +86,6 @@ export default function Title({ data }: TitleProps) {
         <GroomBride className="alex-brush">
         {data?.groom?.first_name} & {data?.bride?.first_name}
         </GroomBride>
-        <Schedule>
-          {data?.date}
-        </Schedule>
       </TitleWrapper>
     </Layout>
   );

@@ -34,18 +34,18 @@ const KakaoTalkShareButton = styled(Button, {
 
 const LinkShareButton = styled(Button, {
   fontFamily: "'Oswald', sans-serif",
-  background: "#00898a",
-  borderColor: "#00898a",
+  background: "#A69C6D",
+  borderColor: "##A69C6D",
   color: "#ffffff",
   "&:hover": {
-    backgroundColor: "#00898a !important",
-    borderColor: "#00898a !important",
+    backgroundColor: "#A69C6D !important",
+    borderColor: "##A69C6D !important",
     opacity: 0.7,
     color: "#ffffff !important",
   },
   "&:focus": {
-    background: "#00898a !important",
-    borderColor: "#00898a !important",
+    background: "#A69C6D !important",
+    borderColor: "#A69C6D !important",
     opacity: 0.7,
     color: "#ffffff !important",
   },
