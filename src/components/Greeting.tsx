@@ -1,5 +1,6 @@
-import { styled } from "@stitches/react";
 import { useState, useEffect } from 'react';
+import { styled } from "@stitches/react";
+
 
 const CountdownContainer = styled("div", {
   display: "inline-block",             // Shrink-wrap the content
@@ -11,6 +12,7 @@ const CountdownContainer = styled("div", {
   textAlign: "center",
   marginTop: 30,
 });
+
 
 // CountdownTimer as a named export
 export function CountdownTimer() {
@@ -32,7 +34,14 @@ export function CountdownTimer() {
     return timeLeft;
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  type TimeLeft = {
+    days?: number;
+    hours?: number;
+    minutes?: number;
+    seconds?: number;
+  };
+
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -41,7 +50,7 @@ export function CountdownTimer() {
     return () => clearInterval(timer);
   }, []);
 
-  const timerComponents = Object.keys(timeLeft).map((interval) => (
+  const timerComponents = (Object.keys(timeLeft) as (keyof TimeLeft)[]).map((interval) => (
     <span key={interval}>
       {timeLeft[interval]} {interval}{' '}
     </span>

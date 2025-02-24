@@ -1,7 +1,7 @@
 type Data = {
   date: string;
   time: string;
-  venu: string;
+  venue: string;
   location: string;
   greeting: string;
   groom: {
