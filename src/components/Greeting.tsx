@@ -4,11 +4,10 @@ import { styled } from "@stitches/react";
 
 const CountdownContainer = styled("div", {
   display: "inline-block",             // Shrink-wrap the content
-  border: "1px solid #F2AA80",         // Double border with desired color
+  border: "3px double #D94625",         // Double border with desired color
   borderRadius: "10px",                 // Rounded corners
   padding: "10px 15px",                // Spacing inside the border
-  backgroundColor: "#F2AA80",            // Background for clarity
-  color: "#8C6658",
+  color: "#402D22",
   textAlign: "center",
   marginTop: 30,
 });
@@ -27,8 +26,8 @@ export function CountdownTimer() {
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+        min: Math.floor((difference / 1000 / 60) % 60),
+        sec: Math.floor((difference / 1000) % 60),
       };
     }
     return timeLeft;
@@ -37,8 +36,8 @@ export function CountdownTimer() {
   type TimeLeft = {
     days?: number;
     hours?: number;
-    minutes?: number;
-    seconds?: number;
+    min?: number;
+    sec?: number;
   };
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
