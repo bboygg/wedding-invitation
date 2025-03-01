@@ -16,8 +16,8 @@ const CongratulatoryMoney = dynamic(
 const Share = dynamic(() => import("@/components/Share"), { ssr: false });
 
 const Footer = styled("footer", {
-  background: "#F2E5D5",
-  color: "#402D22",
+  backgroundColor: "#402D22",
+  color: "#F2E5D5",
   textAlign: "center",
   width: "100%",
   height: "100px",

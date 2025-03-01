@@ -29,12 +29,14 @@ const RedEnvelopeIcon = styled("span", {
 });
 
 const SubContent = styled("p", {
+  fontFamily: "Arial",
   fontSize: "1.5vh",
   lineHeight: 1.75,
   marginBottom: 24,
 });
 
 const Description = styled("p", {
+  fontFamily: "Arial",
   marginTop: 8,
   fontSize: "1.5vh",
 });
@@ -92,7 +94,8 @@ export default function CongratulatoryMoney({
       >
         {data?.groom?.parents?.mother && (
           <div style={{ marginTop: 24, marginBottom: 24 }}>
-            <b>모) {data?.groom?.parents?.mother.name}</b>
+            <b>모)</b> {data?.groom?.parents?.mother.name}
+            <br />
             <CopyToClipboard text={data?.groom?.parents?.mother.account_number}>
               <Button
                 type="text"
@@ -106,7 +109,8 @@ export default function CongratulatoryMoney({
         )}
         {data?.groom && (
           <div>
-            <b>신랑) 고성조</b>
+            <b>신랑)</b> 고성조 
+            <br />
             <CopyToClipboard text={data?.groom?.account_number}>
               <Button
                 type="text"
@@ -122,7 +126,7 @@ export default function CongratulatoryMoney({
           <Description>
             계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.
             <br />
-            When you click on the account number, it is copied as text that can be pasted.
+            Click to copy the account number for easy pasting.
           </Description>
         </div>
       </Modal>
@@ -137,7 +141,8 @@ export default function CongratulatoryMoney({
       >
         {data?.bride && (
           <div>
-            <b>신부) {data?.bride?.last_name}{data?.bride?.first_name}</b>
+            <b>신부)</b> {data?.bride?.last_name}{data?.bride?.first_name}
+            <br />
             <CopyToClipboard text={data?.bride?.account_number}>
               <Button
                 type="text"
@@ -153,7 +158,7 @@ export default function CongratulatoryMoney({
           <Description>
             계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다. 
             <br/>
-            When you click on the account number, it is copied as text that can be pasted.
+            Click to copy the account number for easy pasting.
           </Description>
         </div>
       </Modal>

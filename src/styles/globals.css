@@ -5,6 +5,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: #F2E5D5 !important;
 }
 
 body, p, h1, h3, h4, h5, h6 {
@@ -29,10 +30,41 @@ h2 {
   margin-right: auto;
 }
 
+h3 {
+  color: #D94625;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
 .alex-brush {
   font-family: 'Alex Brush', cursive;
 }
+
+/* Highlight the active (selected) thumbnail */
+.image-gallery-thumbnail.active {
+  border: 3px solid #d94625 !important;
+}
+
+/* Ensure hover changes background & border color */
+.image-gallery-thumbnail:hover {
+  border: 3px solid #dd7230 !important;
+  background-color: #dd7230 !important;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+/* Change navigation arrow default color */
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  color: #d94625 !important; /* Default color */
+  transition: fill 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Change arrow color on hover */
+.image-gallery-left-nav:hover .image-gallery-svg,
+.image-gallery-right-nav:hover .image-gallery-svg {
+  color: #dd7230 !important;
+}
+
 
 @keyframes fadein {
   from {

@@ -20,6 +20,7 @@ const KakaoTalkShareButton = styled(Button, {
   background: "#fee500",
   borderColor: "#fee500",
   color: "#181600",
+  width: "180px",
   "&:hover": {
     backgroundColor: "#fcf07e !important",
     borderColor: "#fcf07e !important",
@@ -37,6 +38,7 @@ const LinkShareButton = styled(Button, {
   background: "#6B7334",
   borderColor: "#6B7334",
   color: "#ffffff",
+  width: "180px",
   "&:hover": {
     backgroundColor: "#6B7334 !important",
     borderColor: "#6B7334 !important",
@@ -72,7 +74,7 @@ export default function Share({ data }: ShareProps) {
           content: {
             title: `${data?.groom?.first_name}❤${data?.bride?.first_name} 결혼식에 초대합니다`,
             description:
-              "Click the button below to open the wedding invitation it.🤵👰",
+              "Click the button below to open the wedding invitation. 🤵👰",
             imageUrl: data?.kakaotalk?.share_image,
             link: {
               mobileWebUrl: data?.kakaotalk?.wedding_invitation_url,
@@ -114,16 +116,15 @@ export default function Share({ data }: ShareProps) {
   return (
     <Wrapper>
       <h2>Share the Love</h2>
-      <p>Share the wedding invitation using the links below. 💌</p>
+      <p>Share the wedding invitation using the buttons below. 💌</p>
       <KakaoTalkShareButton
-        className = "oswald"
         style={{ margin: 8 }}
         icon={<MessageFilled />}
         id="sendKakao"
         size="large"
         onClick={() => setShareCount((prev) => prev + 1)}
       >
-        Share on KakaoTalk
+        KakaoTalk Share
       </KakaoTalkShareButton>
       <CopyToClipboard text={data?.kakaotalk?.wedding_invitation_url ?? ""}>
         <LinkShareButton
@@ -136,7 +137,7 @@ export default function Share({ data }: ShareProps) {
             )
           }
         >
-          Share Link
+          Link Share
         </LinkShareButton>
       </CopyToClipboard>
     </Wrapper>

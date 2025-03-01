@@ -4,7 +4,7 @@ import { styled } from "@stitches/react";
 
 const CountdownContainer = styled("div", {
   display: "inline-block",             // Shrink-wrap the content
-  border: "3px double #D94625",         // Double border with desired color
+  border: "3px double #d94625",         // Double border with desired color
   borderRadius: "10px",                 // Rounded corners
   padding: "10px 15px",                // Spacing inside the border
   color: "#402D22",

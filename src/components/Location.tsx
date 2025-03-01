@@ -13,13 +13,35 @@ const Image = styled("img", {
 });
 
 const Address = styled("p", {
-  marginBottom: 24,
-  padding: "0px 10px",
+  padding: "10px 0px",
 })
 
 type LocationProps = {
   data?: Data;
 };
+
+const StyledButton = styled(Button, {
+  fontFamily: "Arial",
+  background: "#6B7334",
+  borderColor: "#6B7334",
+  color: "#ffffff",
+  margin: "30px", 
+  width: "180px",
+  height: "35px",
+  "&:hover": {
+    backgroundColor: "#6B7334 !important",
+    borderColor: "#6B7334 !important",
+    opacity: 0.7,
+    color: "#ffffff !important",
+  },
+  "&:focus": {
+    backgroundColor: "#798274 !important",
+    borderColor: "#798274 !important",
+    opacity: 0.7,
+    color: "#ffffff !important",
+  },
+});
+
 
 // Named export for NaverMapButton
 export function NaverMapButton() {
@@ -32,12 +54,11 @@ export function NaverMapButton() {
   };
 
   return (
-    <Button onClick={handleClick}>
+    <StyledButton onClick={handleClick}>
       Naver Map
-    </Button>
+    </StyledButton>
   );
 }
-
 
 export function KakaoMapButton() {
   const handleClick = () => {
@@ -49,9 +70,9 @@ export function KakaoMapButton() {
   };
 
   return (
-    <Button onClick={handleClick}>
+    <StyledButton onClick={handleClick}>
       Kakao Map
-    </Button>
+    </StyledButton>
   );
 }
 
@@ -65,44 +86,11 @@ export default function Location({ data }: LocationProps) {
         <br />
         {data?.location}
       </Address>
-      <p>
-      지하철 안내
-      <br />
-      7호선 학동역 10번 출구
-      <br />
-      예식 1시간 전부터 셔틀버스 운행
-      <br />
-      (서울세관 방면)
-      <br />
-      버스 안내
-      <br />
-      언북중학교 입구 정류장 하차
-      <br />
-      간선버스 145,440
-      <br />
-      지선부스 4212
-      <br />
-      서울세관 정류장 하차
-      <br />
-      간선버스 141
-      <br />
-      직행버스 3600
-      <br />
-      차량 안내
-      <br />
-      네비게이션 “토브헤세드”또는 “언북중학교”검색
-      <br />
-      서울시 강남구 논현 2동 도산대로 38길 32
-      <br />
-      (지번)서울특별시 강남구 논현동 72-8
-      </p>
-      
-     
-      <Image src="/assets/location-tovhesed.png" alt="Wedding Location" />
-<br/>
       {/* Use the MapButton here */}
       <NaverMapButton />
       <KakaoMapButton />
+      <br/> 
+      <Image src="/assets/location-tovhesed.png" alt="Wedding Location" />
     </Wrapper>
   );
 }
