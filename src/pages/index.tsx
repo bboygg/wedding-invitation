@@ -8,7 +8,8 @@ import Script from "next/script";
 const Title = dynamic(() => import("@/components/Title"), { ssr: false });
 const Greeting = dynamic(() => import("@/components/Greeting"), { ssr: false });
 const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
-const Location = dynamic(() => import("@/components/Location"), { ssr: false });
+const Korean = dynamic(() => import("@/components/Korean"), { ssr: false });
+const Khmer = dynamic(() => import("@/components/Khmer"), { ssr: false });
 const CongratulatoryMoney = dynamic(
   () => import("@/components/CongratulatoryMoney"),
   { ssr: false }
@@ -61,7 +62,8 @@ export default function Home() {
         <Title data={JsonData} />
         <Greeting data={JsonData} />
         <Gallery />
-        <Location data={JsonData}/>
+        <Korean data={JsonData}/>
+        <Khmer data={JsonData}/>
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
         <Footer>Copyright © 2025 Sungjo & Vorleak</Footer>

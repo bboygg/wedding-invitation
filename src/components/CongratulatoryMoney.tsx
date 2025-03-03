@@ -94,7 +94,7 @@ export default function CongratulatoryMoney({
       >
         {data?.groom?.parents?.mother && (
           <div style={{ marginTop: 24, marginBottom: 24 }}>
-            <b>모)</b> {data?.groom?.parents?.mother.name}
+            <b>모 -</b> {data?.groom?.parents?.mother.name}
             <br />
             <CopyToClipboard text={data?.groom?.parents?.mother.account_number}>
               <Button
@@ -109,7 +109,7 @@ export default function CongratulatoryMoney({
         )}
         {data?.groom && (
           <div>
-            <b>신랑)</b> 고성조 
+            <b>신랑 -</b> 고성조 
             <br />
             <CopyToClipboard text={data?.groom?.account_number}>
               <Button
@@ -126,7 +126,7 @@ export default function CongratulatoryMoney({
           <Description>
             계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.
             <br />
-            Click to copy the account number for easy pasting.
+            Click on the account number for easy copy and pasting.
           </Description>
         </div>
       </Modal>
@@ -141,7 +141,7 @@ export default function CongratulatoryMoney({
       >
         {data?.bride && (
           <div>
-            <b>신부)</b> {data?.bride?.last_name}{data?.bride?.first_name}
+            <b>신부 -</b> {data?.bride?.last_name}{data?.bride?.first_name}
             <br />
             <CopyToClipboard text={data?.bride?.account_number}>
               <Button
@@ -158,7 +158,7 @@ export default function CongratulatoryMoney({
           <Description>
             계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다. 
             <br/>
-            Click to copy the account number for easy pasting.
+            Click on the account number for easy copy and pasting.
           </Description>
         </div>
       </Modal>

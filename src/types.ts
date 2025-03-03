@@ -1,8 +1,12 @@
 type Data = {
-  date: string;
-  time: string;
-  venue: string;
-  location: string;
+  korean_date: string;
+  korean_time: string;
+  korean_venue: string;
+  korean_location: string;
+  khmer_date: string;
+  khmer_time: string;
+  khmer_venue: string;
+  khmer_location: string;
   greeting: string;
   groom: {
     last_name: string;

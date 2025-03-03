@@ -1,8 +1,12 @@
 {
-  "date": "Saturday June 28th, 2025",
-  "time": "3PM",
-  "venue": "TOV HESED",
-  "location": "서울특별시 강남구 도산대로38길 32 (논현동)",
+  "korean_date": "Saturday June 28th, 2025",
+  "korean_time": "3PM",
+  "korean_venue": "TOV HESED",
+  "korean_location": "서울특별시 강남구 도산대로38길 32 (논현동)",
+  "khmer_date": "Saturday July 5th, 2025",
+  "khmer_time": "All day",
+  "khmer_venue": "Phnom Penh",
+  "khmer_location": "Cambodia",
   "greeting": "We are excited to celebrate this special day with you. \n Please join us as we begin this new chapter together! \n \n  특별한 이 날, 여러분과 함께할 수 있어 진심으로 행복합니다. \n 우리 인생의 새로운 시작을 함께 열어갈 소중한 여러분을 초대합니다",
   "groom": {
     "first_name": "Sungjo",
