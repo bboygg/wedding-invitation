@@ -88,10 +88,10 @@ export function KakaoMapButton() {
 
 const CountdownContainer = styled("div", {
   display: "inline-block",             // Shrink-wrap the content
-  border: "3px double #4178BF",         // Double border with desired color
+  border: "3px double #023373",         // Double border with desired color
   borderRadius: "10px",                 // Rounded corners
   padding: "10px 15px",                // Spacing inside the border
-  color: "#4178BF",
+  color: "#023373",
   textAlign: "center",
   marginTop: 30,
 });
