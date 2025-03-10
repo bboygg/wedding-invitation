@@ -10,7 +10,7 @@ body {
 
 body, p, h1, h3, h4, h5, h6 {
   font-family: 'Gowun Batang', 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', -apple-system, BlinkMacSystemFont;
-  color: #402D22;
+  color: #8C0303;
 }
 
 p { 
@@ -20,18 +20,18 @@ p {
 
 h2 {
   font-family: "Song Myung", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: #D94625;
+  color: #8C0303;
   font-size: 3.5vh;
   margin-top: 50px;
   margin-bottom: 32px;
   text-align: center;
-  max-width: 250px;
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
 }
 
 h3 {
-  color: #D94625;
+  color: #8C0303;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -42,27 +42,27 @@ h3 {
 
 /* Highlight the active (selected) thumbnail */
 .image-gallery-thumbnail.active {
-  border: 3px solid #d94625 !important;
+  border: 3px solid #8C0303 !important;
 }
 
 /* Ensure hover changes background & border color */
 .image-gallery-thumbnail:hover {
-  border: 3px solid #dd7230 !important;
-  background-color: #dd7230 !important;
+  border: 3px solid #D92B04 !important;
+  background-color:#D92B04 !important;
   transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 /* Change navigation arrow default color */
 .image-gallery-left-nav .image-gallery-svg,
 .image-gallery-right-nav .image-gallery-svg {
-  color: #d94625 !important; /* Default color */
+  color: #8C0303 !important; /* Default color */
   transition: fill 0.3s ease-in-out; /* Smooth transition */
 }
 
 /* Change arrow color on hover */
 .image-gallery-left-nav:hover .image-gallery-svg,
 .image-gallery-right-nav:hover .image-gallery-svg {
-  color: #dd7230 !important;
+  color: #D92B04!important;
 }
 
 

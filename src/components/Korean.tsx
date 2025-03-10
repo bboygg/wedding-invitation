@@ -31,21 +31,21 @@ type LocationProps = {
 
 const StyledButton = styled(Button, {
   fontFamily: "Arial",
-  background: "#6B7334",
-  borderColor: "#6B7334",
+  background: "#F2B138",
+  borderColor: "#F2B138",
   color: "#ffffff",
   margin: "30px", 
   width: "180px",
   height: "35px",
   "&:hover": {
-    backgroundColor: "#6B7334 !important",
-    borderColor: "#6B7334 !important",
+    backgroundColor: "#F2B138 !important",
+    borderColor: "#F2B138 !important",
     opacity: 0.7,
     color: "#ffffff !important",
   },
   "&:focus": {
-    backgroundColor: "#798274 !important",
-    borderColor: "#798274 !important",
+    backgroundColor: "#D92B04 !important",
+    borderColor: "#D92B04 !important",
     opacity: 0.7,
     color: "#ffffff !important",
   },
@@ -88,10 +88,10 @@ export function KakaoMapButton() {
 
 const CountdownContainer = styled("div", {
   display: "inline-block",             // Shrink-wrap the content
-  border: "3px double #d94625",         // Double border with desired color
+  border: "3px double #4178BF",         // Double border with desired color
   borderRadius: "10px",                 // Rounded corners
   padding: "10px 15px",                // Spacing inside the border
-  color: "#402D22",
+  color: "#4178BF",
   textAlign: "center",
   marginTop: 30,
 });
@@ -150,7 +150,7 @@ export function CountdownTimer() {
 export default function Location({ data }: LocationProps) {
   return (
     <Wrapper>
-        <h2>Korean Wedding</h2>
+        <h2>The Korean Wedding</h2>
 
       <Content>
         {data?.korean_date} - {data?.korean_time}

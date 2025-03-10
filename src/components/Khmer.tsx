@@ -25,21 +25,21 @@ type LocationProps = {
 
 const StyledButton = styled(Button, {
   fontFamily: "Arial",
-  background: "#6B7334",
-  borderColor: "#6B7334",
+  background: "#4178BF",
+  borderColor: "#4178BF",
   color: "#ffffff",
   margin: "30px", 
   width: "180px",
   height: "35px",
   "&:hover": {
-    backgroundColor: "#6B7334 !important",
-    borderColor: "#6B7334 !important",
+    backgroundColor: "#4178BF !important",
+    borderColor: "#4178BF !important",
     opacity: 0.7,
     color: "#ffffff !important",
   },
   "&:focus": {
-    backgroundColor: "#798274 !important",
-    borderColor: "#798274 !important",
+    backgroundColor: "#023373 !important",
+    borderColor: "#023373 !important",
     opacity: 0.7,
     color: "#ffffff !important",
   },
@@ -48,10 +48,10 @@ const StyledButton = styled(Button, {
 
 const CountdownContainer = styled("div", {
     display: "inline-block",             // Shrink-wrap the content
-    border: "3px double #d94625",         // Double border with desired color
+    border: "3px double #4178BF",         // Double border with desired color
     borderRadius: "10px",                 // Rounded corners
     padding: "10px 15px",                // Spacing inside the border
-    color: "#402D22",
+    color: "#4178BF",
     textAlign: "center",
     marginTop: 30,
   });
@@ -110,7 +110,7 @@ const CountdownContainer = styled("div", {
 export default function Location({ data }: LocationProps) {
   return (
     <Wrapper>
-        <h2>Khmer Wedding</h2>
+        <h2>The Khmer Wedding</h2>
 
         <Content>
         {data?.khmer_date} - {data?.khmer_time}
