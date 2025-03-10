@@ -33,14 +33,14 @@ const SubContent = styled("p", {
   fontSize: "1.5vh",
   lineHeight: 1.75,
   marginBottom: 24,
-  color: "#023373"
+  color: "#023373",
 });
 
 const Description = styled("p", {
   fontFamily: "Arial",
   marginTop: 8,
   fontSize: "1.5vh",
-  color: "#023373"
+  color: "#023373",
 });
 
 const ContactButton = styled("div", {

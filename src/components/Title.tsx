@@ -81,7 +81,7 @@ export default function Title({ data }: TitleProps) {
 
       <TitleWrapper style={{ color: "white" }}>
         <WeddingInvitation>
-        WE'RE GETTING MARRIED
+        WE ARE GETTING MARRIED
         </WeddingInvitation>
         <GroomBride className="alex-brush">
         {data?.groom?.first_name} & {data?.bride?.first_name}
