@@ -28,7 +28,7 @@ export default function Greeting({ data }: GreetingProps) {
   return (
     <Wrapper>
       
-      <h2>Our Wedding Celebration</h2>
+      <h2>Wedding Celebration</h2>
 
       <Content>
         {data?.greeting?.split("\n")?.map((value, index) => {

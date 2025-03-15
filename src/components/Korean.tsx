@@ -1,11 +1,8 @@
 import { styled } from "@stitches/react";
-import { Button } from "antd";
 import { useState, useEffect } from 'react';
-
 
 const Wrapper = styled("div", {
   width: "100%",
-  paddingBottom: 42,
   textAlign: "center",
 });
 
@@ -23,36 +20,13 @@ const Image = styled("img", {
 
 const Address = styled("p", {
   padding: "10px 0px",
-})
+});
 
 type LocationProps = {
   data?: Data;
 };
 
-const StyledButton = styled(Button, {
-  fontFamily: "Arial",
-  background: "#F2B138",
-  borderColor: "#F2B138",
-  color: "#ffffff",
-  margin: "30px", 
-  width: "180px",
-  height: "35px",
-  "&:hover": {
-    backgroundColor: "#F2B138 !important",
-    borderColor: "#F2B138 !important",
-    opacity: 0.7,
-    color: "#ffffff !important",
-  },
-  "&:focus": {
-    backgroundColor: "#D92B04 !important",
-    borderColor: "#D92B04 !important",
-    opacity: 0.7,
-    color: "#ffffff !important",
-  },
-});
-
-
-// Named export for NaverMapButton
+// 📌 Naver Map Button (Now Uses `global.css`)
 export function NaverMapButton() {
   const handleClick = () => {
     window.open(
@@ -63,12 +37,13 @@ export function NaverMapButton() {
   };
 
   return (
-    <StyledButton onClick={handleClick}>
+    <button className="styled-button" onClick={handleClick}>
       Naver Map
-    </StyledButton>
+    </button>
   );
 }
 
+// 📌 Kakao Map Button (Now Uses `global.css`)
 export function KakaoMapButton() {
   const handleClick = () => {
     window.open(
@@ -79,36 +54,24 @@ export function KakaoMapButton() {
   };
 
   return (
-    <StyledButton onClick={handleClick}>
+    <button className="styled-button" onClick={handleClick}>
       Kakao Map
-    </StyledButton>
+    </button>
   );
 }
 
-
-const CountdownContainer = styled("div", {
-  display: "inline-block",             // Shrink-wrap the content
-  border: "3px double #023373",         // Double border with desired color
-  borderRadius: "10px",                 // Rounded corners
-  padding: "10px 15px",                // Spacing inside the border
-  color: "#023373",
-  textAlign: "center",
-  marginTop: 30,
-});
-
-// CountdownTimer as a named export
+// 📌 Countdown Timer (Now Uses `global.css`)
 export function CountdownTimer() {
-  // ... (same CountdownTimer code)
   const calculateTimeLeft = () => {
     const targetDate = new Date('2025-06-28T15:00:00');
     const now = new Date();
     const difference = targetDate.getTime() - now.getTime();
-    let timeLeft = {};
+    let timeLeft: { [key: string]: number } = {};
 
     if (difference > 0) {
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        hr: Math.floor((difference / (1000 * 60 * 60)) % 24),
         min: Math.floor((difference / 1000 / 60) % 60),
         sec: Math.floor((difference / 1000) % 60),
       };
@@ -118,7 +81,7 @@ export function CountdownTimer() {
 
   type TimeLeft = {
     days?: number;
-    hours?: number;
+    hr?: number;
     min?: number;
     sec?: number;
   };
@@ -132,25 +95,22 @@ export function CountdownTimer() {
     return () => clearInterval(timer);
   }, []);
 
-  const timerComponents = (Object.keys(timeLeft) as (keyof TimeLeft)[]).map((interval) => (
-    <span key={interval}>
-      {timeLeft[interval]} {interval}{' '}
-    </span>
-  ));
-
   return (
-    <CountdownContainer>
-      {timerComponents.length > 0 ? timerComponents : <span>Wedding Time</span>}
-    </CountdownContainer>
+    <div className="countdown-container">
+      {Object.entries(timeLeft).map(([unit, value]) => (
+        <span key={unit} className="countdown-unit">
+          {value} {unit}{" "}
+        </span>
+      ))}
+    </div>
   );
 }
 
-
-// Default export for Location component
+// 📌 Default Export for Location Component
 export default function Location({ data }: LocationProps) {
   return (
     <Wrapper>
-        <h2>The Korean Wedding</h2>
+      <h2>The Korean Wedding</h2>
 
       <Content>
         {data?.korean_date} - {data?.korean_time}
@@ -162,14 +122,12 @@ export default function Location({ data }: LocationProps) {
         {data?.korean_venue}
         <br />
         {data?.korean_location}
-
-
       </Address>
 
-      {/* Use the MapButton here */}
+      {/* Use the Map Buttons */}
       <NaverMapButton />
       <KakaoMapButton />
-      <br/> 
+      <br />
       <Image src="/assets/location-tovhesed.png" alt="Wedding Location" />
     </Wrapper>
   );

@@ -1,16 +1,16 @@
 /* Import Alex Brush Font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Gowun+Batang&family=Song+Myung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Gowun+Batang&family=Song+Myung:wght@400;700&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #F2E5D5 !important;
+  background-color: #F2E5D5 !important;  
 }
 
 body, p, h1, h3, h4, h5, h6 {
   font-family: 'Gowun Batang', 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', -apple-system, BlinkMacSystemFont;
-  color: #8C0303;
+  color: #B30000;
 }
 
 p { 
@@ -20,18 +20,23 @@ p {
 
 h2 {
   font-family: "Song Myung", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: #8C0303;
-  font-size: 3.5vh;
-  margin-top: 50px;
-  margin-bottom: 32px;
+  color: #B30000;
+  font-size: 3vh;
   text-align: center;
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 250px;
+  margin: 70px auto 70px auto;
+  
+  padding: 15px 10px;  /* Add padding inside the border */
+
+  border: 2px solid #B30000;   /* Inner thin border */
+  outline: 5px solid #B30000;  /* Outer bold border */
+  outline-offset: 5px;        /* Space between the two borders */
+  border-radius: 5px; /* Optional: Add rounded corners */
 }
 
+
 h3 {
-  color: #8C0303;
+  color: #B30000;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -42,20 +47,21 @@ h3 {
 
 /* Highlight the active (selected) thumbnail */
 .image-gallery-thumbnail.active {
-  border: 3px solid #8C0303 !important;
+  border: 3px solid #B30000 !important;
+  box-shadow: 0 0 8px rgba(179, 0, 0, 0.5);
 }
 
 /* Ensure hover changes background & border color */
 .image-gallery-thumbnail:hover {
   border: 3px solid #D92B04 !important;
-  background-color:#D92B04 !important;
+  background-color: #D92B04 !important;
   transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 /* Change navigation arrow default color */
 .image-gallery-left-nav .image-gallery-svg,
 .image-gallery-right-nav .image-gallery-svg {
-  color: #8C0303 !important; /* Default color */
+  color: #B30000 !important; /* Default color */
   transition: fill 0.3s ease-in-out; /* Smooth transition */
 }
 
@@ -66,14 +72,84 @@ h3 {
 }
 
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Countdown Timer Styling */
+.countdown-container {
+  display: inline-block;
+  font-family: 'Noto Serif HK', serif;
+  font-size: 3vh;
+  font-weight: bold;
+  border: 2px solid #8C0303; /* Inner thin border */
+  padding: 10px 15px;
+  color: #B30000;
+  background-color: #F2E5D5; /* Aged paper effect */
+  text-align: center;
+  margin-top: 30px;
+  letter-spacing: 2px; /* Spacing for retro effect */
+  box-shadow: 3px 3px 0px #630202; /* Depth effect */
 }
-@-moz-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
-@-webkit-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
-@-o-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+
+/* Individual countdown unit styling */
+.countdown-unit {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+/* Center the countdown in a container */
+.center-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* 📌 Styled Button*/
+
+.styled-button {
+  font-family: "Song Myung", "Arial", sans-serif;
+  font-size: 16px;
+  background: #D92B04; /* Deep red-orange, inspired by HK signage */
+  border: 2px solid #8C0303; /* Bold darker red border */
+  color: #ffffff;
+  margin: 20px;
+  width: 190px;
+  height: 40px;
+  border-radius: 6px; /* Slightly rounded corners for a vintage print look */
+  text-transform: uppercase;
+  letter-spacing: 1.5px; /* Subtle letter spacing for retro feel */
+  box-shadow: 3px 3px 0px #630202; /* Adds depth */
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.styled-button:hover {
+  background-color: #B02403; /* Darker red on hover */
+  border-color: #630202; /* Darker outline */
+  color: #FFD700; /* Gold text for contrast */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 5px 5px 0px #630202; /* Shadow moves for depth */
+}
+
+/* Focus Effect */
+.styled-button:focus {
+  background-color: #630202; /* Darker for contrast */
+  border-color: #FFD700;
+  color: #ffffff;
+}
+
+
+/* Footer  */
+
+.footer {
+  background-color: #8C0303; /* Deep red for HK neon feel */
+  color: #FFD700;  
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  font-family: "Song Myung", "Arial", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  border-top: 4px solid #630202; /* Bold top border */
+  margin-top: 80px;
+}

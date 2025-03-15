@@ -1,5 +1,4 @@
 import { styled } from "@stitches/react";
-import { Button } from "antd";
 import { useState, useEffect } from 'react';
 
 const Wrapper = styled("div", {
@@ -9,110 +8,73 @@ const Wrapper = styled("div", {
 });
 
 const Content = styled("p", {
-    marginTop: 50,
-    marginBottom: 50,
-    width: "100%",
-    textAlign: "center",
-  });
+  marginTop: 50,
+  marginBottom: 50,
+  width: "100%",
+  textAlign: "center",
+});
 
 const Address = styled("p", {
   padding: "10px 0px",
-})
+});
 
 type LocationProps = {
   data?: Data;
 };
 
-const StyledButton = styled(Button, {
-  fontFamily: "Arial",
-  background: "#4178BF",
-  borderColor: "#4178BF",
-  color: "#ffffff",
-  margin: "30px", 
-  width: "180px",
-  height: "35px",
-  "&:hover": {
-    backgroundColor: "#4178BF !important",
-    borderColor: "#4178BF !important",
-    opacity: 0.7,
-    color: "#ffffff !important",
-  },
-  "&:focus": {
-    backgroundColor: "#023373 !important",
-    borderColor: "#023373 !important",
-    opacity: 0.7,
-    color: "#ffffff !important",
-  },
-});
+// 📌 Countdown Timer (Now Uses `global.css`)
+export function CountdownTimer() {
+  const calculateTimeLeft = () => {
+    const targetDate = new Date('2025-07-05T07:00:00');
+    const now = new Date();
+    const difference = targetDate.getTime() - now.getTime();
+    let timeLeft: { [key: string]: number } = {};
 
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hr: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        min: Math.floor((difference / (1000 / 60)) % 60),
+        sec: Math.floor((difference / 1000) % 60),
+      };
+    }
+    return timeLeft;
+  };
 
-const CountdownContainer = styled("div", {
-    display: "inline-block",             // Shrink-wrap the content
-    border: "3px double #023373",         // Double border with desired color
-    borderRadius: "10px",                 // Rounded corners
-    padding: "10px 15px",                // Spacing inside the border
-    color: "#023373",
-    textAlign: "center",
-    marginTop: 30,
-  });
-  
-  // CountdownTimer as a named export
-  export function CountdownTimer() {
-    // ... (same CountdownTimer code)
-    const calculateTimeLeft = () => {
-      const targetDate = new Date('2025-07-05T07:00:00');
-      const now = new Date();
-      const difference = targetDate.getTime() - now.getTime();
-      let timeLeft = {};
-  
-      if (difference > 0) {
-        timeLeft = {
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          min: Math.floor((difference / 1000 / 60) % 60),
-          sec: Math.floor((difference / 1000) % 60),
-        };
-      }
-      return timeLeft;
-    };
-  
-    type TimeLeft = {
-      days?: number;
-      hours?: number;
-      min?: number;
-      sec?: number;
-    };
-  
-    const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
-  
-    useEffect(() => {
-      const timer = setInterval(() => {
-        setTimeLeft(calculateTimeLeft());
-      }, 1000);
-      return () => clearInterval(timer);
-    }, []);
-  
-    const timerComponents = (Object.keys(timeLeft) as (keyof TimeLeft)[]).map((interval) => (
-      <span key={interval}>
-        {timeLeft[interval]} {interval}{' '}
-      </span>
-    ));
-  
-    return (
-      <CountdownContainer>
-        {timerComponents.length > 0 ? timerComponents : <span>Wedding Time</span>}
-      </CountdownContainer>
-    );
-  }
-  
+  type TimeLeft = {
+    days?: number;
+    hr?: number;
+    min?: number;
+    sec?: number;
+  };
 
-// Default export for Location component
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="countdown-container">
+      {Object.entries(timeLeft).map(([unit, value]) => (
+        <span key={unit} className="countdown-unit">
+          {value} {unit}{" "}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+// 📌 Default Export for Location Component
 export default function Location({ data }: LocationProps) {
   return (
     <Wrapper>
-        <h2>The Khmer Wedding</h2>
+      <h2>The Khmer Wedding</h2>
 
-        <Content>
+      <Content>
         {data?.khmer_date} - {data?.khmer_time}
         <br />
         <CountdownTimer />
