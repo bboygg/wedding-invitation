@@ -26,6 +26,13 @@ type LocationProps = {
   data?: Data;
 };
 
+const ReceptionInfo = styled("p", {
+  fontSize: "2vh", 
+  marginTop: "20px",
+  marginBottom: "20px",
+  textAlign: "center",
+});
+
 // 📌 Naver Map Button (Now Uses `global.css`)
 export function NaverMapButton() {
   const handleClick = () => {
@@ -129,6 +136,14 @@ export default function Location({ data }: LocationProps) {
       <KakaoMapButton />
       <br />
       <Image src="/assets/location-tovhesed.png" alt="Wedding Location" />
+      {/* Wedding Reception Info */}
+      <ReceptionInfo>
+        <strong>피로연 안내</strong>
+        <br />
+        2025년 6월 14일 토요일 오후 5시 - 8시
+        <br />
+        경북 영주시 광복로 32번길 16 남서울웨딩 2층 연회장
+      </ReceptionInfo>
     </Wrapper>
   );
 }
