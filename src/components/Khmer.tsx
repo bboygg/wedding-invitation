@@ -67,6 +67,24 @@ export function CountdownTimer() {
   );
 }
 
+// 📌 Google Map Button (Now Uses `global.css`)
+export function GoogleMapButton() {
+  const handleClick = () => {
+    window.open(
+      "https://maps.app.goo.gl/AKBT4TsmEvge2BVU9",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
+  return (
+    <button className="styled-button" onClick={handleClick}>
+      Google Map
+    </button>
+  );
+}
+
+
 // 📌 Default Export for Location Component
 export default function Location({ data }: LocationProps) {
   return (
@@ -84,6 +102,8 @@ export default function Location({ data }: LocationProps) {
         <br />
         {data?.khmer_location}
       </Address>
+      {/* Use Goolge Button */}
+      <GoogleMapButton />
     </Wrapper>
   );
 }
