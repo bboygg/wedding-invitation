@@ -117,7 +117,7 @@ export function CountdownTimer() {
 export default function Location({ data }: LocationProps) {
   return (
     <Wrapper>
-      <h2>The Korean Wedding</h2>
+      <h2>Korean Wedding</h2>
 
       <Content>
         {data?.korean_date} - {data?.korean_time}
@@ -138,7 +138,7 @@ export default function Location({ data }: LocationProps) {
       <Image src="/assets/location-tovhesed.png" alt="Wedding Location" />
       {/* Wedding Reception Info */}
       <ReceptionInfo>
-        <strong>피로연 안내</strong>
+        <h4>피로연 안내</h4>
         <br />
         2025년 6월 14일 토요일 오후 5시 - 8시
         <br />

@@ -14,19 +14,6 @@ declare global {
 const Wrapper = styled("div", {
   width: "100%",
   textAlign: "center",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  marginTop: "50px",
-});
-
-const ButtonContainer = styled("div", {
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "center",
-  gap: "10px",
-  marginTop: "20px",
 });
 
 type ShareProps = {
@@ -96,7 +83,6 @@ export default function Share({ data }: ShareProps) {
 
       <p>Share the wedding invitation using the buttons below. 💌</p>
 
-      <ButtonContainer>
         <button
           className="styled-button"
           id="sendKakao"
@@ -116,7 +102,6 @@ export default function Share({ data }: ShareProps) {
             <LinkOutlined /> Link Share
           </button>
         </CopyToClipboard>
-      </ButtonContainer>
     </Wrapper>
   );
 }

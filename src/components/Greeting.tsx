@@ -10,7 +10,6 @@ const Wrapper = styled("div", {
 const Content = styled("p", {
   marginTop: 50,
   marginBottom: 50,
-  width: "100%",
   textAlign: "center",
 });
 

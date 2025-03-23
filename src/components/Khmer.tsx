@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 
 const Wrapper = styled("div", {
   width: "100%",
-  paddingBottom: 42,
   textAlign: "center",
 });
 
@@ -72,7 +71,7 @@ export function CountdownTimer() {
 export default function Location({ data }: LocationProps) {
   return (
     <Wrapper>
-      <h2>The Khmer Wedding</h2>
+      <h2>Khmer Wedding</h2>
 
       <Content>
         {data?.khmer_date} - {data?.khmer_time}

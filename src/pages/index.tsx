@@ -36,25 +36,23 @@ export default function Home() {
         />
         <title>Sungjo ❤ Vorleak Wedding</title>
       </Head>
-
+      <Title data={JsonData} />
       <main>
         {/* Kakao SDK */}
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
 
         {/* Main Content */}
-        <Title data={JsonData} />
+       
         <Greeting data={JsonData} />
         <Gallery />
         <Korean data={JsonData} />
         <Khmer data={JsonData} />
         <CongratulatoryMoney data={JsonData} />
         <Share data={JsonData} />
-
-        {/* Footer */}
-        <footer className="footer">
+      </main>
+      <footer className="footer">
           <p>© 2025 Sungjo & Vorleak | All Rights Reserved</p>
         </footer>
-      </main>
     </>
   );
 }

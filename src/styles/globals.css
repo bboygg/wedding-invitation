@@ -3,33 +3,36 @@
 
 html,
 body {
-  padding: 0;
   margin: 0;
   background-color: #F2E5D5 !important;
   overflow-x: hidden;  
 }
-/* 
+
+main {
+  padding: 0 25px;
+}
+
 /* mobile view padding issue fix*/
 * {
   box-sizing: border-box;
 } 
 
-body, p, h1, h3, h4, h5, h6 {
+p, h1, h3, h4, h5, h6 {
   font-family: 'Gowun Batang', 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', -apple-system, BlinkMacSystemFont;
   color: #B30000;
 }
 
 p { 
-  font-size: 2.5vh;
+  font-size: 2.4vh;
   line-height: 2;
 }
 
 h2 {
-  font-family: "Song Myung", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Song Myung", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
   color: #B30000;
-  font-size: 3vh;
+  font-size: 2.8vh;
   text-align: center;
-  max-width: 300px;
+  max-width: 270px;
   margin: 70px auto 70px auto;
   
   padding: 15px 10px;  /* Add padding inside the border */
@@ -45,6 +48,14 @@ h3 {
   color: #B30000;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+
+h4 {
+  font-family: "Song Myung", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #B30000;
+  margin-top: 50px;
+  margin-bottom: -10px;
 }
 
 .alex-brush {
@@ -144,12 +155,23 @@ h3 {
   color: #ffffff;
 }
 
+/* Custom Modal Styles */
+.custom-modal .ant-modal-title {
+  font-family: "Song Myung", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+  color: #4178bf;
+  text-align: center;
+  
+}
+
+.custom-modal .ant-modal-body {
+  font-family: 'Gowun Batang', 'Helvetica Neue', Arial;
+  color: #4178bf;
+}
 
 /* Footer  */
 
 .footer {
-  background-color: #8C0303; /* Deep red for HK neon feel */
-  color: #FFD700;  
+  background-color: #8C0303;
   text-align: center;
   width: 100%;
   padding: 20px 0;
@@ -157,5 +179,10 @@ h3 {
   font-size: 16px;
   letter-spacing: 1.5px;
   border-top: 4px solid #630202; /* Bold top border */
-  margin-top: 80px;
+  margin-top: 100px;
+}
+
+.footer p {
+  color: #FFD700 !important;
+  font-size: 1.7vh;
 }

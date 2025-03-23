@@ -12,8 +12,7 @@ const Wrapper = styled("div", {
 });
 
 const Content = styled("p", {
-  marginBottom: 24,
-  padding: "0px 10px",
+  marginBottom: 35,
 });
 
 const RedEnvelopeIcon = styled("span", {
@@ -29,16 +28,16 @@ const RedEnvelopeIcon = styled("span", {
 });
 
 const SubContent = styled("p", {
-  fontFamily: "Arial",
+  fontFamily: "Gowun Batang",
   fontSize: "1.5vh",
   lineHeight: 1.75,
   marginBottom: 24,
-  color: "#023373",
+  color: "#8C0303",
 });
 
 const Description = styled("p", {
-  fontFamily: "Arial",
-  marginTop: 8,
+  fontFamily: "Gowun Batang",
+  marginTop: 30,
   fontSize: "1.5vh",
   color: "#023373",
 });
@@ -48,7 +47,6 @@ const ContactButton = styled("div", {
   textAlign: "center",
   marginLeft: 24,
   marginRight: 24,
-  marginBottom: 24,
 });
 
 type CongratulatoryMoneyProps = {
@@ -65,7 +63,7 @@ export default function CongratulatoryMoney({
     <Wrapper>
       <h2>Congratulations</h2>
       <Content>축하의 마음을 담아 축의금을 전달해 보세요.<br/>
-      You can express your congratulations by sending a celebratory gift. 🎉💌
+      You can express your congratulations by sending a celebratory gift. 🎉🎁
       </Content>
       <ContactButton onClick={() => setGroomVisible(true)}>
         <RedEnvelopeIcon>🧧</RedEnvelopeIcon>
@@ -86,6 +84,7 @@ export default function CongratulatoryMoney({
         </SubContent>
       </ContactButton>
       <Modal
+        className="custom-modal"
         title={<b>신랑측 계좌번호</b>}
         open={groomVisible}
         onOk={() => setGroomVisible(false)}
@@ -101,7 +100,12 @@ export default function CongratulatoryMoney({
             <CopyToClipboard text={data?.groom?.parents?.mother.account_number}>
               <Button
                 type="text"
-                style={{ padding: 0, margin: 0 }}
+                style={{ 
+                  padding: 0, 
+                  margin: 0, 
+                  color: '#4178bf', 
+                  fontFamily: 'Gowun Batang',
+                }}
                 onClick={() => message.success("계좌번호가 복사되었습니다. Account number has been copied.")}
               >
                 {data?.groom?.parents?.mother.account_number}&nbsp;<FontAwesomeIcon icon={faCopy} />
@@ -116,7 +120,12 @@ export default function CongratulatoryMoney({
             <CopyToClipboard text={data?.groom?.account_number}>
               <Button
                 type="text"
-                style={{ padding: 0, margin: 0 }}
+                style={{ 
+                  padding: 0, 
+                  margin: 0, 
+                  color: '#4178bf', 
+                  fontFamily: 'Gowun Batang',
+                }}
                 onClick={() => message.success("계좌번호가 복사되었습니다. Account number has been copied.")}
               >
                 {data?.groom?.account_number}&nbsp;<FontAwesomeIcon icon={faCopy} />
@@ -133,6 +142,7 @@ export default function CongratulatoryMoney({
         </div>
       </Modal>
       <Modal
+        className="custom-modal"
         title={<b>신부측 계좌번호</b>}
         open={brideVisible}
         onOk={() => setBrideVisible(false)}
@@ -148,7 +158,12 @@ export default function CongratulatoryMoney({
             <CopyToClipboard text={data?.bride?.account_number}>
               <Button
                 type="text"
-                style={{ padding: 0, margin: 0 }}
+                style={{ 
+                  padding: 0, 
+                  margin: 0, 
+                  color: '#4178bf', 
+                  fontFamily: 'Gowun Batang',
+                }}
                 onClick={() => message.success("계좌번호가 복사되었습니다. Account number has been copied.")}
               >
                 {data?.bride?.account_number}&nbsp;<FontAwesomeIcon icon={faCopy} />
