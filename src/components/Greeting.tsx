@@ -14,7 +14,9 @@ const Content = styled("p", {
 });
 
 const GroomBride = styled("p", {
-  marginBottom: 0,
+  fontFamily: "Song Myung",
+  marginTop: 80,
+  marginBottom: 100,
   width: "100%",
   textAlign: "center",
 });
