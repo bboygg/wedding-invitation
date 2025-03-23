@@ -134,8 +134,6 @@ export default function Location({ data }: LocationProps) {
       {/* Use the Map Buttons */}
       <NaverMapButton />
       <KakaoMapButton />
-      <br />
-      <Image src="/assets/location-tovhesed.png" alt="Wedding Location" />
       {/* Wedding Reception Info */}
       <ReceptionInfo>
         <h4>피로연 안내</h4>

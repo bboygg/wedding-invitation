@@ -8,6 +8,10 @@ const Wrapper = styled("div", {
 
 const images = [
   {
+    original: "./assets/photo-0.jpg",
+    thumbnail: "./assets/photo-0.jpg",
+  },
+  {
     original: "./assets/photo-1.jpg",
     thumbnail: "./assets/photo-1.jpg",
   },
@@ -42,6 +46,18 @@ const images = [
   {
     original: "./assets/photo-9.jpg",
     thumbnail: "./assets/photo-9.jpg",
+  },
+  {
+    original: "./assets/photo-10.jpg",
+    thumbnail: "./assets/photo-10.jpg",
+  },
+  {
+    original: "./assets/photo-11.jpg",
+    thumbnail: "./assets/photo-11.jpg",
+  },
+  {
+    original: "./assets/photo-12.jpg",
+    thumbnail: "./assets/photo-12.jpg",
   },
 ];
 

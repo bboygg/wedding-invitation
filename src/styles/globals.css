@@ -34,9 +34,7 @@ h2 {
   text-align: center;
   max-width: 270px;
   margin: 70px auto 70px auto;
-  
   padding: 15px 10px;  /* Add padding inside the border */
-
   border: 2px solid #B30000;   /* Inner thin border */
   outline: 5px solid #B30000;  /* Outer bold border */
   outline-offset: 5px;        /* Space between the two borders */
@@ -108,9 +106,9 @@ h4 {
 /* Individual countdown unit styling */
 .countdown-unit {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 5px 5px;
   margin: 0 5px;
-  font-size: 2vh;
+  font-size: 1.8vh;
   font-weight: bold;
 }
 
