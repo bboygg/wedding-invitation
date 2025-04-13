@@ -10,7 +10,7 @@ declare global {
   }
 }
 
-// ✅ Ensures entire section is centered but does NOT override <h2>
+// ✅ Ensures the entire section is centered but does NOT override <h2>
 const Wrapper = styled("div", {
   width: "100%",
   textAlign: "center",
@@ -21,7 +21,7 @@ type ShareProps = {
 };
 
 export default function Share({ data }: ShareProps) {
-  // Initialize Kakao SDK once when component mounts or when data changes
+  // Initialize Kakao SDK once when component mounts or when data changes.
   useEffect(() => {
     if (typeof window !== "undefined") {
       try {
@@ -35,16 +35,15 @@ export default function Share({ data }: ShareProps) {
     }
   }, [data]);
 
-  // Handler to create Kakao share button and trigger the share process
+  // Handler to trigger sharing using Kakao.Link.sendDefault.
   const handleShare = () => {
     if (
       window.Kakao &&
       window.Kakao.Link &&
-      typeof window.Kakao.Link.createDefaultButton === "function"
+      typeof window.Kakao.Link.sendDefault === "function"
     ) {
-      window.Kakao.Link.createDefaultButton({
+      window.Kakao.Link.sendDefault({
         objectType: "feed",
-        container: "#sendKakao",
         content: {
           title: `${data?.groom?.first_name}❤${data?.bride?.first_name} 결혼식에 초대합니다`,
           description: "Click the button below to open the wedding invitation. 🤵👰",
@@ -65,12 +64,7 @@ export default function Share({ data }: ShareProps) {
         ],
         installTalk: true,
       });
-
-      // Simulate button click to trigger Kakao share after a short delay
-      setTimeout(() => {
-        document.getElementById("sendKakao")?.click();
-        message.success("카카오톡으로 청첩장을 공유합니다! Share wedding invitation through KakaoTalk!");
-      }, 100);
+      message.success("카카오톡으로 청첩장을 공유합니다! Share wedding invitation through KakaoTalk!");
     } else {
       console.error("Kakao Link API is not available.");
     }
@@ -80,11 +74,9 @@ export default function Share({ data }: ShareProps) {
     <Wrapper>
       <h2 className="global-h2">Share the Love</h2>
       <p>Share the wedding invitation using the buttons below. 💌</p>
-
-      <button className="styled-button" id="sendKakao" onClick={handleShare}>
+      <button className="styled-button" onClick={handleShare}>
         <MessageFilled /> KakaoTalk
       </button>
-
       <CopyToClipboard text={data?.kakaotalk?.wedding_invitation_url ?? ""}>
         <button
           className="styled-button"
