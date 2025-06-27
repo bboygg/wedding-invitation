@@ -166,7 +166,7 @@ export default function Location({ data }: LocationProps) {
       <h4 style={{ marginTop: 40}}>
         By Car | 차량으로 오시는 방법 <br/>
       </h4>
-      <h5>네비게이션: '토브헤세드' 또는 '언북중학교' 검색 <br/>
+      <h5>네비게이션: &quot;토브헤세드&quot; 또는 &quot;언북중학교&quot; 검색 <br/>
           도로명주소: 서울특별시 강남구 논현2동 도산대로 38길 32 <br/>
           주차장 안내: 주차요원의 안내를 받으세요.</h5>
 
